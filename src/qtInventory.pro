@@ -7,4 +7,10 @@ HEADERS += DataBase.h \
 SOURCES += DataBase.cpp \
     main.cpp \
     DBQueries.cpp
-FORMS += autenticarse.ui
+FORMS += autenticarse.ui \
+    administrar.ui \
+    Bodega.ui \
+    Informacion_usuario_pendi.ui \
+    interfaz.ui \
+    Producto.ui \
+    usuario.ui
