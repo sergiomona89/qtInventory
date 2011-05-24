@@ -13,7 +13,7 @@
   <property name="windowTitle">
    <string>Administrar</string>
   </property>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
      <x>50</x>
@@ -24,7 +24,7 @@
    </property>
    <layout class="QGridLayout" name="gridLayout_2">
     <item row="0" column="0">
-     <widget class="QRadioButton" name="radioButton">
+     <widget class="QRadioButton" name="UsuarioRadioButtonAdmin">
       <property name="text">
        <string>Usuario</string>
       </property>
@@ -53,7 +53,7 @@
        </widget>
       </item>
       <item row="0" column="0">
-       <widget class="QPushButton" name="pushButton">
+       <widget class="QPushButton" name="CrearPushButtonAdmin">
         <property name="text">
          <string>Crear</string>
         </property>
@@ -110,21 +110,11 @@
     </item>
    </layout>
   </widget>
-  <zorder>radioButton</zorder>
-  <zorder>radioButton_2</zorder>
-  <zorder>radioButton_3</zorder>
-  <zorder>pushButton</zorder>
-  <zorder>pushButton_2</zorder>
-  <zorder>pushButton_3</zorder>
-  <zorder>horizontalSpacer</zorder>
-  <zorder>horizontalSpacer_2</zorder>
-  <zorder>horizontalSpacer_3</zorder>
-  <zorder>pushButton</zorder>
  </widget>
  <resources/>
  <connections>
   <connection>
-   <sender>pushButton</sender>
+   <sender>CrearPushButtonAdmin</sender>
    <signal>clicked()</signal>
    <receiver>Administrar</receiver>
    <slot>open()</slot>

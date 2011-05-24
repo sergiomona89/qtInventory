@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>Autenticacion</class>
- <widget class="QDialog" name="Autenticacion">
+ <class>Autenticarse</class>
+ <widget class="QDialog" name="Autenticarse">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -13,7 +13,7 @@
   <property name="windowTitle">
    <string>Autenticacion</string>
   </property>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
      <x>71</x>
@@ -66,12 +66,12 @@
   <connection>
    <sender>buttonBox</sender>
    <signal>accepted()</signal>
-   <receiver>Autenticacion</receiver>
+   <receiver>Autenticarse</receiver>
    <slot>accept()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>195</x>
-     <y>173</y>
+     <x>253</x>
+     <y>145</y>
     </hint>
     <hint type="destinationlabel">
      <x>198</x>
@@ -82,12 +82,12 @@
   <connection>
    <sender>buttonBox</sender>
    <signal>rejected()</signal>
-   <receiver>Autenticacion</receiver>
+   <receiver>Autenticarse</receiver>
    <slot>reject()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>115</x>
-     <y>163</y>
+     <x>173</x>
+     <y>145</y>
     </hint>
     <hint type="destinationlabel">
      <x>132</x>

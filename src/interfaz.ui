@@ -13,7 +13,7 @@
   <property name="windowTitle">
    <string>Software Inventario</string>
   </property>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
      <x>60</x>
@@ -24,28 +24,28 @@
    </property>
    <layout class="QGridLayout" name="gridLayout">
     <item row="0" column="0">
-     <widget class="QPushButton" name="pushButton_2">
+     <widget class="QPushButton" name="entradasPushButtonInterfaz">
       <property name="text">
        <string>Entradas</string>
       </property>
      </widget>
     </item>
     <item row="1" column="0">
-     <widget class="QPushButton" name="pushButton_3">
+     <widget class="QPushButton" name="salidasPushButtonInterfaz">
       <property name="text">
        <string>Salidas</string>
       </property>
      </widget>
     </item>
     <item row="2" column="0">
-     <widget class="QPushButton" name="pushButton_4">
+     <widget class="QPushButton" name="InventarioPushButtonInterfaz">
       <property name="text">
        <string>Inventario</string>
       </property>
      </widget>
     </item>
     <item row="3" column="0">
-     <widget class="QPushButton" name="pushButton">
+     <widget class="QPushButton" name="AdministrarPushButtonInterfaz">
       <property name="text">
        <string>Administrar</string>
       </property>
@@ -57,7 +57,7 @@
  <resources/>
  <connections>
   <connection>
-   <sender>pushButton_2</sender>
+   <sender>entradasPushButtonInterfaz</sender>
    <signal>clicked()</signal>
    <receiver>Interfaz</receiver>
    <slot>open()</slot>
@@ -73,7 +73,7 @@
    </hints>
   </connection>
   <connection>
-   <sender>pushButton_3</sender>
+   <sender>salidasPushButtonInterfaz</sender>
    <signal>clicked()</signal>
    <receiver>Interfaz</receiver>
    <slot>open()</slot>
@@ -89,7 +89,7 @@
    </hints>
   </connection>
   <connection>
-   <sender>pushButton_4</sender>
+   <sender>InventarioPushButtonInterfaz</sender>
    <signal>clicked()</signal>
    <receiver>Interfaz</receiver>
    <slot>open()</slot>
@@ -105,7 +105,7 @@
    </hints>
   </connection>
   <connection>
-   <sender>pushButton</sender>
+   <sender>AdministrarPushButtonInterfaz</sender>
    <signal>clicked()</signal>
    <receiver>Interfaz</receiver>
    <slot>open()</slot>
@@ -115,8 +115,8 @@
      <y>202</y>
     </hint>
     <hint type="destinationlabel">
-     <x>26</x>
-     <y>215</y>
+     <x>78</x>
+     <y>224</y>
     </hint>
    </hints>
   </connection>
