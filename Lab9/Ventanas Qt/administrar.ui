@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Administrar</class>
+ <widget class="QDialog" name="Administrar">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>318</width>
+    <height>179</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Administrar</string>
+  </property>
+  <widget class="QWidget" name="">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>40</y>
+     <width>212</width>
+     <height>97</height>
+    </rect>
+   </property>
+   <layout class="QGridLayout" name="gridLayout_2">
+    <item row="0" column="0">
+     <widget class="QRadioButton" name="radioButton">
+      <property name="text">
+       <string>Usuario</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="1">
+     <spacer name="horizontalSpacer">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>18</width>
+        <height>20</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item row="0" column="2" rowspan="3">
+     <layout class="QGridLayout" name="gridLayout">
+      <item row="1" column="0">
+       <widget class="QPushButton" name="pushButton_2">
+        <property name="text">
+         <string>Consultar</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="0">
+       <widget class="QPushButton" name="pushButton">
+        <property name="text">
+         <string>Crear</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QPushButton" name="pushButton_3">
+        <property name="text">
+         <string>Modificar</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="1" column="0">
+     <widget class="QRadioButton" name="radioButton_2">
+      <property name="text">
+       <string>Bodega</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="1">
+     <spacer name="horizontalSpacer_2">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>18</width>
+        <height>20</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item row="2" column="0">
+     <widget class="QRadioButton" name="radioButton_3">
+      <property name="text">
+       <string>Producto</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="1">
+     <spacer name="horizontalSpacer_3">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>18</width>
+        <height>20</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+   </layout>
+  </widget>
+  <zorder>radioButton</zorder>
+  <zorder>radioButton_2</zorder>
+  <zorder>radioButton_3</zorder>
+  <zorder>pushButton</zorder>
+  <zorder>pushButton_2</zorder>
+  <zorder>pushButton_3</zorder>
+  <zorder>horizontalSpacer</zorder>
+  <zorder>horizontalSpacer_2</zorder>
+  <zorder>horizontalSpacer_3</zorder>
+  <zorder>pushButton</zorder>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>pushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>Administrar</receiver>
+   <slot>open()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>224</x>
+     <y>55</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>287</x>
+     <y>20</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_2</sender>
+   <signal>clicked()</signal>
+   <receiver>Administrar</receiver>
+   <slot>open()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>244</x>
+     <y>91</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>276</x>
+     <y>91</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_3</sender>
+   <signal>clicked()</signal>
+   <receiver>Administrar</receiver>
+   <slot>open()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>214</x>
+     <y>125</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>274</x>
+     <y>149</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

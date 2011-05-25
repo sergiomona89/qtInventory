@@ -1,0 +1,1210 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE pgml SYSTEM "pgml.dtd">
+<pgml description="org.argouml.sequence2.diagram.UMLSequenceDiagram|127-0-1-1--2035d03b:1300b171e48:-8000:0000000000000A69"
+      name="Diagrama de secuencia"
+>
+  <group name="Fig0"
+       description="org.argouml.sequence2.diagram.FigClassifierRole[16, 40, 150, 547]pathVisible=false;stereotypeView=0;"
+       href="127-0-1-1--2035d03b:1300b171e48:-8000:0000000000000A6A"
+       fill="1"
+       fillcolor="white"
+       stroke="1"
+       strokecolor="black"
+  >
+    <private>
+    </private>
+    
+    <rectangle name="Fig0.0"
+      x="16"
+      y="40"
+      width="150"
+      height="547"
+      fill="0"
+      fillcolor="white"
+      stroke="0"
+      strokecolor="black"
+      visibility="0"
+    />
+    <rectangle name="Fig0.1"
+      x="16"
+      y="40"
+      width="150"
+      height="0"
+      fill="0"
+      fillcolor="white"
+      stroke="0"
+      strokecolor="black"
+    />
+    <group name="Fig0.2"
+         description="org.argouml.sequence2.diagram.FigLifeLine[16, 89, 150, 497]"
+         href="127-0-1-1--2035d03b:1300b171e48:-8000:0000000000000A6A"
+         fill="1"
+         fillcolor="white"
+         stroke="1"
+         strokecolor="black"
+    >
+      <private>
+      </private>
+      
+      <rectangle name="Fig0.2.0"
+        x="16"
+        y="89"
+        width="150"
+        height="497"
+        fill="0"
+        fillcolor="white"
+        stroke="0"
+        strokecolor="black"
+      />
+      <path name="Fig0.2.1"
+        description="org.tigris.gef.presentation.FigLine"
+        fill="1"
+        fillcolor="white"
+        stroke="1"
+        strokecolor="black"
+      >
+        <moveto x="91"
+                y="89" />
+        <lineto x="91"
+                y="586" />
+      </path>
+      <group name="Fig0.2.2"
+           description="org.argouml.sequence2.diagram.FigActivation[81, 89, 20, 497]"
+           href="127-0-1-1--2035d03b:1300b171e48:-8000:0000000000000A6A"
+           fill="1"
+           fillcolor="white"
+           stroke="1"
+           strokecolor="black"
+      >
+        <private>
+        </private>
+        
+        <rectangle name="Fig0.2.2.0"
+          x="81"
+          y="89"
+          width="20"
+          height="497"
+          fill="1"
+          fillcolor="white"
+          stroke="1"
+          strokecolor="black"
+        />
+      </group>
+    </group>
+    <group name="Fig0.3"
+         description="org.argouml.sequence2.diagram.FigHead[16, 40, 150, 50]"
+         href="127-0-1-1--2035d03b:1300b171e48:-8000:0000000000000A6A"
+         fill="1"
+         fillcolor="white"
+         stroke="1"
+         strokecolor="black"
+    >
+      <private>
+      </private>
+      
+      <rectangle name="Fig0.3.0"
+        x="16"
+        y="40"
+        width="150"
+        height="50"
+        fill="1"
+        fillcolor="white"
+        stroke="1"
+        strokecolor="black"
+      />
+      <text name="Fig0.3.1"
+        x="16"
+        y="40"
+        width="150"
+        height="23"
+        fill="0"
+        fillcolor="white"
+        stroke="0"
+        strokecolor="black"
+        textcolor="black"
+        font="Dialog"
+        italic="false"
+        bold="false"
+        textsize="12"
+        justification="Center"
+      >/Cliente</text>
+      <group name="Fig0.3.2"
+           description="org.argouml.uml.diagram.ui.FigStereotypesGroup[16, 40, 150, 0]"
+           href="127-0-1-1--2035d03b:1300b171e48:-8000:0000000000000A6A"
+           fill="0"
+           fillcolor="white"
+           stroke="0"
+           strokecolor="black"
+      >
+        <private>
+        </private>
+        
+        <rectangle name="Fig0.3.2.0"
+          x="16"
+          y="40"
+          width="150"
+          height="0"
+          fill="0"
+          fillcolor="white"
+          stroke="0"
+          strokecolor="black"
+        />
+      </group>
+    </group>
+  </group>
+  <group name="Fig1"
+       description="org.argouml.sequence2.diagram.FigClassifierRole[192, 40, 150, 545]pathVisible=false;stereotypeView=0;"
+       href="127-0-1-1--2035d03b:1300b171e48:-8000:0000000000000A6D"
+       fill="1"
+       fillcolor="white"
+       stroke="1"
+       strokecolor="black"
+  >
+    <private>
+    </private>
+    
+    <rectangle name="Fig1.0"
+      x="192"
+      y="40"
+      width="150"
+      height="545"
+      fill="0"
+      fillcolor="white"
+      stroke="0"
+      strokecolor="black"
+      visibility="0"
+    />
+    <rectangle name="Fig1.1"
+      x="192"
+      y="40"
+      width="150"
+      height="0"
+      fill="0"
+      fillcolor="white"
+      stroke="0"
+      strokecolor="black"
+    />
+    <group name="Fig1.2"
+         description="org.argouml.sequence2.diagram.FigLifeLine[192, 89, 150, 495]"
+         href="127-0-1-1--2035d03b:1300b171e48:-8000:0000000000000A6D"
+         fill="1"
+         fillcolor="white"
+         stroke="1"
+         strokecolor="black"
+    >
+      <private>
+      </private>
+      
+      <rectangle name="Fig1.2.0"
+        x="192"
+        y="89"
+        width="150"
+        height="495"
+        fill="0"
+        fillcolor="white"
+        stroke="0"
+        strokecolor="black"
+      />
+      <path name="Fig1.2.1"
+        description="org.tigris.gef.presentation.FigLine"
+        fill="1"
+        fillcolor="white"
+        stroke="1"
+        strokecolor="black"
+      >
+        <moveto x="267"
+                y="89" />
+        <lineto x="267"
+                y="584" />
+      </path>
+      <group name="Fig1.2.2"
+           description="org.argouml.sequence2.diagram.FigActivation[257, 89, 20, 495]"
+           href="127-0-1-1--2035d03b:1300b171e48:-8000:0000000000000A6D"
+           fill="1"
+           fillcolor="white"
+           stroke="1"
+           strokecolor="black"
+      >
+        <private>
+        </private>
+        
+        <rectangle name="Fig1.2.2.0"
+          x="257"
+          y="89"
+          width="20"
+          height="495"
+          fill="1"
+          fillcolor="white"
+          stroke="1"
+          strokecolor="black"
+        />
+      </group>
+    </group>
+    <group name="Fig1.3"
+         description="org.argouml.sequence2.diagram.FigHead[192, 40, 150, 50]"
+         href="127-0-1-1--2035d03b:1300b171e48:-8000:0000000000000A6D"
+         fill="1"
+         fillcolor="white"
+         stroke="1"
+         strokecolor="black"
+    >
+      <private>
+      </private>
+      
+      <rectangle name="Fig1.3.0"
+        x="192"
+        y="40"
+        width="150"
+        height="50"
+        fill="1"
+        fillcolor="white"
+        stroke="1"
+        strokecolor="black"
+      />
+      <text name="Fig1.3.1"
+        x="192"
+        y="40"
+        width="150"
+        height="23"
+        fill="0"
+        fillcolor="white"
+        stroke="0"
+        strokecolor="black"
+        textcolor="black"
+        font="Dialog"
+        italic="false"
+        bold="false"
+        textsize="12"
+        justification="Center"
+      >/Mediador</text>
+      <group name="Fig1.3.2"
+           description="org.argouml.uml.diagram.ui.FigStereotypesGroup[192, 40, 150, 0]"
+           href="127-0-1-1--2035d03b:1300b171e48:-8000:0000000000000A6D"
+           fill="0"
+           fillcolor="white"
+           stroke="0"
+           strokecolor="black"
+      >
+        <private>
+        </private>
+        
+        <rectangle name="Fig1.3.2.0"
+          x="192"
+          y="40"
+          width="150"
+          height="0"
+          fill="0"
+          fillcolor="white"
+          stroke="0"
+          strokecolor="black"
+        />
+      </group>
+    </group>
+  </group>
+  <group name="Fig2"
+       description="org.argouml.sequence2.diagram.FigClassifierRole[368, 40, 209, 545]pathVisible=false;stereotypeView=0;"
+       href="127-0-1-1--2035d03b:1300b171e48:-8000:0000000000000A70"
+       fill="1"
+       fillcolor="white"
+       stroke="1"
+       strokecolor="black"
+  >
+    <private>
+    </private>
+    
+    <rectangle name="Fig2.0"
+      x="368"
+      y="40"
+      width="209"
+      height="545"
+      fill="0"
+      fillcolor="white"
+      stroke="0"
+      strokecolor="black"
+      visibility="0"
+    />
+    <rectangle name="Fig2.1"
+      x="368"
+      y="40"
+      width="209"
+      height="0"
+      fill="0"
+      fillcolor="white"
+      stroke="0"
+      strokecolor="black"
+    />
+    <group name="Fig2.2"
+         description="org.argouml.sequence2.diagram.FigLifeLine[368, 89, 209, 495]"
+         href="127-0-1-1--2035d03b:1300b171e48:-8000:0000000000000A70"
+         fill="1"
+         fillcolor="white"
+         stroke="1"
+         strokecolor="black"
+    >
+      <private>
+      </private>
+      
+      <rectangle name="Fig2.2.0"
+        x="368"
+        y="89"
+        width="209"
+        height="495"
+        fill="0"
+        fillcolor="white"
+        stroke="0"
+        strokecolor="black"
+      />
+      <path name="Fig2.2.1"
+        description="org.tigris.gef.presentation.FigLine"
+        fill="1"
+        fillcolor="white"
+        stroke="1"
+        strokecolor="black"
+      >
+        <moveto x="472"
+                y="89" />
+        <lineto x="472"
+                y="584" />
+      </path>
+      <group name="Fig2.2.2"
+           description="org.argouml.sequence2.diagram.FigActivation[462, 89, 20, 495]"
+           href="127-0-1-1--2035d03b:1300b171e48:-8000:0000000000000A70"
+           fill="1"
+           fillcolor="white"
+           stroke="1"
+           strokecolor="black"
+      >
+        <private>
+        </private>
+        
+        <rectangle name="Fig2.2.2.0"
+          x="462"
+          y="89"
+          width="20"
+          height="495"
+          fill="1"
+          fillcolor="white"
+          stroke="1"
+          strokecolor="black"
+        />
+      </group>
+    </group>
+    <group name="Fig2.3"
+         description="org.argouml.sequence2.diagram.FigHead[368, 40, 209, 50]"
+         href="127-0-1-1--2035d03b:1300b171e48:-8000:0000000000000A70"
+         fill="1"
+         fillcolor="white"
+         stroke="1"
+         strokecolor="black"
+    >
+      <private>
+      </private>
+      
+      <rectangle name="Fig2.3.0"
+        x="368"
+        y="40"
+        width="209"
+        height="50"
+        fill="1"
+        fillcolor="white"
+        stroke="1"
+        strokecolor="black"
+      />
+      <text name="Fig2.3.1"
+        x="368"
+        y="40"
+        width="209"
+        height="23"
+        fill="0"
+        fillcolor="white"
+        stroke="0"
+        strokecolor="black"
+        textcolor="black"
+        font="Dialog"
+        italic="false"
+        bold="false"
+        textsize="12"
+        justification="Center"
+      >/Comunicaciones (Lado Cliente )</text>
+      <group name="Fig2.3.2"
+           description="org.argouml.uml.diagram.ui.FigStereotypesGroup[368, 40, 209, 0]"
+           href="127-0-1-1--2035d03b:1300b171e48:-8000:0000000000000A70"
+           fill="0"
+           fillcolor="white"
+           stroke="0"
+           strokecolor="black"
+      >
+        <private>
+        </private>
+        
+        <rectangle name="Fig2.3.2.0"
+          x="368"
+          y="40"
+          width="209"
+          height="0"
+          fill="0"
+          fillcolor="white"
+          stroke="0"
+          strokecolor="black"
+        />
+      </group>
+    </group>
+  </group>
+  <group name="Fig3"
+       description="org.argouml.sequence2.diagram.FigClassifierRole[616, 40, 221, 545]pathVisible=false;stereotypeView=0;"
+       href="127-0-1-1--2035d03b:1300b171e48:-8000:0000000000000A73"
+       fill="1"
+       fillcolor="white"
+       stroke="1"
+       strokecolor="black"
+  >
+    <private>
+    </private>
+    
+    <rectangle name="Fig3.0"
+      x="616"
+      y="40"
+      width="221"
+      height="545"
+      fill="0"
+      fillcolor="white"
+      stroke="0"
+      strokecolor="black"
+      visibility="0"
+    />
+    <rectangle name="Fig3.1"
+      x="616"
+      y="40"
+      width="221"
+      height="0"
+      fill="0"
+      fillcolor="white"
+      stroke="0"
+      strokecolor="black"
+    />
+    <group name="Fig3.2"
+         description="org.argouml.sequence2.diagram.FigLifeLine[616, 89, 221, 495]"
+         href="127-0-1-1--2035d03b:1300b171e48:-8000:0000000000000A73"
+         fill="1"
+         fillcolor="white"
+         stroke="1"
+         strokecolor="black"
+    >
+      <private>
+      </private>
+      
+      <rectangle name="Fig3.2.0"
+        x="616"
+        y="89"
+        width="221"
+        height="495"
+        fill="0"
+        fillcolor="white"
+        stroke="0"
+        strokecolor="black"
+      />
+      <path name="Fig3.2.1"
+        description="org.tigris.gef.presentation.FigLine"
+        fill="1"
+        fillcolor="white"
+        stroke="1"
+        strokecolor="black"
+      >
+        <moveto x="726"
+                y="89" />
+        <lineto x="726"
+                y="584" />
+      </path>
+      <group name="Fig3.2.2"
+           description="org.argouml.sequence2.diagram.FigActivation[716, 89, 20, 495]"
+           href="127-0-1-1--2035d03b:1300b171e48:-8000:0000000000000A73"
+           fill="1"
+           fillcolor="white"
+           stroke="1"
+           strokecolor="black"
+      >
+        <private>
+        </private>
+        
+        <rectangle name="Fig3.2.2.0"
+          x="716"
+          y="89"
+          width="20"
+          height="495"
+          fill="1"
+          fillcolor="white"
+          stroke="1"
+          strokecolor="black"
+        />
+      </group>
+    </group>
+    <group name="Fig3.3"
+         description="org.argouml.sequence2.diagram.FigHead[616, 40, 221, 50]"
+         href="127-0-1-1--2035d03b:1300b171e48:-8000:0000000000000A73"
+         fill="1"
+         fillcolor="white"
+         stroke="1"
+         strokecolor="black"
+    >
+      <private>
+      </private>
+      
+      <rectangle name="Fig3.3.0"
+        x="616"
+        y="40"
+        width="221"
+        height="50"
+        fill="1"
+        fillcolor="white"
+        stroke="1"
+        strokecolor="black"
+      />
+      <text name="Fig3.3.1"
+        x="616"
+        y="40"
+        width="221"
+        height="23"
+        fill="0"
+        fillcolor="white"
+        stroke="0"
+        strokecolor="black"
+        textcolor="black"
+        font="Dialog"
+        italic="false"
+        bold="false"
+        textsize="12"
+        justification="Center"
+      >/Comunicaciones ( Lado Servidor )</text>
+      <group name="Fig3.3.2"
+           description="org.argouml.uml.diagram.ui.FigStereotypesGroup[616, 40, 221, 0]"
+           href="127-0-1-1--2035d03b:1300b171e48:-8000:0000000000000A73"
+           fill="0"
+           fillcolor="white"
+           stroke="0"
+           strokecolor="black"
+      >
+        <private>
+        </private>
+        
+        <rectangle name="Fig3.3.2.0"
+          x="616"
+          y="40"
+          width="221"
+          height="0"
+          fill="0"
+          fillcolor="white"
+          stroke="0"
+          strokecolor="black"
+        />
+      </group>
+    </group>
+  </group>
+  <group name="Fig4"
+       description="org.argouml.sequence2.diagram.FigClassifierRole[864, 40, 199, 545]pathVisible=false;stereotypeView=0;"
+       href="127-0-1-1--2035d03b:1300b171e48:-8000:0000000000000A76"
+       fill="1"
+       fillcolor="white"
+       stroke="1"
+       strokecolor="black"
+  >
+    <private>
+    </private>
+    
+    <rectangle name="Fig4.0"
+      x="864"
+      y="40"
+      width="199"
+      height="545"
+      fill="0"
+      fillcolor="white"
+      stroke="0"
+      strokecolor="black"
+      visibility="0"
+    />
+    <rectangle name="Fig4.1"
+      x="864"
+      y="40"
+      width="199"
+      height="0"
+      fill="0"
+      fillcolor="white"
+      stroke="0"
+      strokecolor="black"
+    />
+    <group name="Fig4.2"
+         description="org.argouml.sequence2.diagram.FigLifeLine[864, 89, 199, 495]"
+         href="127-0-1-1--2035d03b:1300b171e48:-8000:0000000000000A76"
+         fill="1"
+         fillcolor="white"
+         stroke="1"
+         strokecolor="black"
+    >
+      <private>
+      </private>
+      
+      <rectangle name="Fig4.2.0"
+        x="864"
+        y="89"
+        width="199"
+        height="495"
+        fill="0"
+        fillcolor="white"
+        stroke="0"
+        strokecolor="black"
+      />
+      <path name="Fig4.2.1"
+        description="org.tigris.gef.presentation.FigLine"
+        fill="1"
+        fillcolor="white"
+        stroke="1"
+        strokecolor="black"
+      >
+        <moveto x="963"
+                y="89" />
+        <lineto x="963"
+                y="584" />
+      </path>
+      <group name="Fig4.2.2"
+           description="org.argouml.sequence2.diagram.FigActivation[953, 89, 20, 495]"
+           href="127-0-1-1--2035d03b:1300b171e48:-8000:0000000000000A76"
+           fill="1"
+           fillcolor="white"
+           stroke="1"
+           strokecolor="black"
+      >
+        <private>
+        </private>
+        
+        <rectangle name="Fig4.2.2.0"
+          x="953"
+          y="89"
+          width="20"
+          height="495"
+          fill="1"
+          fillcolor="white"
+          stroke="1"
+          strokecolor="black"
+        />
+      </group>
+    </group>
+    <group name="Fig4.3"
+         description="org.argouml.sequence2.diagram.FigHead[864, 40, 199, 50]"
+         href="127-0-1-1--2035d03b:1300b171e48:-8000:0000000000000A76"
+         fill="1"
+         fillcolor="white"
+         stroke="1"
+         strokecolor="black"
+    >
+      <private>
+      </private>
+      
+      <rectangle name="Fig4.3.0"
+        x="864"
+        y="40"
+        width="199"
+        height="50"
+        fill="1"
+        fillcolor="white"
+        stroke="1"
+        strokecolor="black"
+      />
+      <text name="Fig4.3.1"
+        x="864"
+        y="40"
+        width="199"
+        height="23"
+        fill="0"
+        fillcolor="white"
+        stroke="0"
+        strokecolor="black"
+        textcolor="black"
+        font="Dialog"
+        italic="false"
+        bold="false"
+        textsize="12"
+        justification="Center"
+      >/Mediador ( Lado del servidor )</text>
+      <group name="Fig4.3.2"
+           description="org.argouml.uml.diagram.ui.FigStereotypesGroup[864, 40, 199, 0]"
+           href="127-0-1-1--2035d03b:1300b171e48:-8000:0000000000000A76"
+           fill="0"
+           fillcolor="white"
+           stroke="0"
+           strokecolor="black"
+      >
+        <private>
+        </private>
+        
+        <rectangle name="Fig4.3.2.0"
+          x="864"
+          y="40"
+          width="199"
+          height="0"
+          fill="0"
+          fillcolor="white"
+          stroke="0"
+          strokecolor="black"
+        />
+      </group>
+    </group>
+  </group>
+  <group name="Fig5"
+       description="org.argouml.sequence2.diagram.FigClassifierRole[1088, 40, 150, 547]pathVisible=false;stereotypeView=0;"
+       href="127-0-1-1--2035d03b:1300b171e48:-8000:0000000000000A79"
+       fill="1"
+       fillcolor="white"
+       stroke="1"
+       strokecolor="black"
+  >
+    <private>
+    </private>
+    
+    <rectangle name="Fig5.0"
+      x="1088"
+      y="40"
+      width="150"
+      height="547"
+      fill="0"
+      fillcolor="white"
+      stroke="0"
+      strokecolor="black"
+      visibility="0"
+    />
+    <rectangle name="Fig5.1"
+      x="1088"
+      y="40"
+      width="150"
+      height="0"
+      fill="0"
+      fillcolor="white"
+      stroke="0"
+      strokecolor="black"
+    />
+    <group name="Fig5.2"
+         description="org.argouml.sequence2.diagram.FigLifeLine[1088, 89, 150, 497]"
+         href="127-0-1-1--2035d03b:1300b171e48:-8000:0000000000000A79"
+         fill="1"
+         fillcolor="white"
+         stroke="1"
+         strokecolor="black"
+    >
+      <private>
+      </private>
+      
+      <rectangle name="Fig5.2.0"
+        x="1088"
+        y="89"
+        width="150"
+        height="497"
+        fill="0"
+        fillcolor="white"
+        stroke="0"
+        strokecolor="black"
+      />
+      <path name="Fig5.2.1"
+        description="org.tigris.gef.presentation.FigLine"
+        fill="1"
+        fillcolor="white"
+        stroke="1"
+        strokecolor="black"
+      >
+        <moveto x="1163"
+                y="89" />
+        <lineto x="1163"
+                y="586" />
+      </path>
+      <group name="Fig5.2.2"
+           description="org.argouml.sequence2.diagram.FigActivation[1153, 89, 20, 497]"
+           href="127-0-1-1--2035d03b:1300b171e48:-8000:0000000000000A79"
+           fill="1"
+           fillcolor="white"
+           stroke="1"
+           strokecolor="black"
+      >
+        <private>
+        </private>
+        
+        <rectangle name="Fig5.2.2.0"
+          x="1153"
+          y="89"
+          width="20"
+          height="497"
+          fill="1"
+          fillcolor="white"
+          stroke="1"
+          strokecolor="black"
+        />
+      </group>
+    </group>
+    <group name="Fig5.3"
+         description="org.argouml.sequence2.diagram.FigHead[1088, 40, 150, 50]"
+         href="127-0-1-1--2035d03b:1300b171e48:-8000:0000000000000A79"
+         fill="1"
+         fillcolor="white"
+         stroke="1"
+         strokecolor="black"
+    >
+      <private>
+      </private>
+      
+      <rectangle name="Fig5.3.0"
+        x="1088"
+        y="40"
+        width="150"
+        height="50"
+        fill="1"
+        fillcolor="white"
+        stroke="1"
+        strokecolor="black"
+      />
+      <text name="Fig5.3.1"
+        x="1088"
+        y="40"
+        width="150"
+        height="23"
+        fill="0"
+        fillcolor="white"
+        stroke="0"
+        strokecolor="black"
+        textcolor="black"
+        font="Dialog"
+        italic="false"
+        bold="false"
+        textsize="12"
+        justification="Center"
+      >/Manejar_Base_Datos</text>
+      <group name="Fig5.3.2"
+           description="org.argouml.uml.diagram.ui.FigStereotypesGroup[1088, 40, 150, 0]"
+           href="127-0-1-1--2035d03b:1300b171e48:-8000:0000000000000A79"
+           fill="0"
+           fillcolor="white"
+           stroke="0"
+           strokecolor="black"
+      >
+        <private>
+        </private>
+        
+        <rectangle name="Fig5.3.2.0"
+          x="1088"
+          y="40"
+          width="150"
+          height="0"
+          fill="0"
+          fillcolor="white"
+          stroke="0"
+          strokecolor="black"
+        />
+      </group>
+    </group>
+  </group>
+  <group name="Fig6"
+       description="org.argouml.sequence2.diagram.FigMessage"
+       href="127-0-1-1--2035d03b:1300b171e48:-8000:0000000000000A81"
+       stroke="1"
+       strokecolor="black"
+  >
+    <private>
+      sourcePortFig="Fig0.0"
+      destPortFig="Fig1.0"
+      sourceFigNode="Fig0"
+      destFigNode="Fig1"
+      <argouml:pathitem figname="Fig6.1"
+                        classname="org.argouml.uml.diagram.ui.PathItemPlacement"
+                        figclassname="org.argouml.uml.diagram.ui.FigTextGroup"
+                        ownerhref="127-0-1-1--2035d03b:1300b171e48:-8000:0000000000000A81"
+                        angle="270.0"
+                        offset="16" />
+    </private>
+    <path name="Fig6.0"
+      description="org.tigris.gef.presentation.FigPoly"
+      fill="0"
+      fillcolor="white"
+      stroke="1"
+      strokecolor="black"
+    >
+      <moveto x="101"
+              y="128" />
+      <lineto x="257"
+              y="128" />
+    </path>
+  </group>
+  <group name="Fig7"
+       description="org.argouml.sequence2.diagram.FigMessage"
+       href="127-0-1-1--2035d03b:1300b171e48:-8000:0000000000000A86"
+       stroke="1"
+       strokecolor="black"
+  >
+    <private>
+      sourcePortFig="Fig1.0"
+      destPortFig="Fig2.0"
+      sourceFigNode="Fig1"
+      destFigNode="Fig2"
+      <argouml:pathitem figname="Fig7.1"
+                        classname="org.argouml.uml.diagram.ui.PathItemPlacement"
+                        figclassname="org.argouml.uml.diagram.ui.FigTextGroup"
+                        ownerhref="127-0-1-1--2035d03b:1300b171e48:-8000:0000000000000A86"
+                        angle="270.0"
+                        offset="9" />
+    </private>
+    <path name="Fig7.0"
+      description="org.tigris.gef.presentation.FigPoly"
+      fill="0"
+      fillcolor="white"
+      stroke="1"
+      strokecolor="black"
+    >
+      <moveto x="277"
+              y="128" />
+      <lineto x="462"
+              y="128" />
+    </path>
+  </group>
+  <group name="Fig8"
+       description="org.argouml.sequence2.diagram.FigMessage"
+       href="127-0-1-1--2035d03b:1300b171e48:-8000:0000000000000A8B"
+       stroke="1"
+       strokecolor="black"
+  >
+    <private>
+      sourcePortFig="Fig2.0"
+      destPortFig="Fig3.0"
+      sourceFigNode="Fig2"
+      destFigNode="Fig3"
+      <argouml:pathitem figname="Fig8.1"
+                        classname="org.argouml.uml.diagram.ui.PathItemPlacement"
+                        figclassname="org.argouml.uml.diagram.ui.FigTextGroup"
+                        ownerhref="127-0-1-1--2035d03b:1300b171e48:-8000:0000000000000A8B"
+                        angle="270.0"
+                        offset="10" />
+    </private>
+    <path name="Fig8.0"
+      description="org.tigris.gef.presentation.FigPoly"
+      fill="0"
+      fillcolor="white"
+      stroke="1"
+      strokecolor="black"
+    >
+      <moveto x="482"
+              y="148" />
+      <lineto x="716"
+              y="148" />
+    </path>
+  </group>
+  <group name="Fig9"
+       description="org.argouml.sequence2.diagram.FigMessage"
+       href="127-0-1-1--2035d03b:1300b171e48:-8000:0000000000000A90"
+       stroke="1"
+       strokecolor="black"
+  >
+    <private>
+      sourcePortFig="Fig3.0"
+      destPortFig="Fig4.0"
+      sourceFigNode="Fig3"
+      destFigNode="Fig4"
+      <argouml:pathitem figname="Fig9.1"
+                        classname="org.argouml.uml.diagram.ui.PathItemPlacement"
+                        figclassname="org.argouml.uml.diagram.ui.FigTextGroup"
+                        ownerhref="127-0-1-1--2035d03b:1300b171e48:-8000:0000000000000A90"
+                        angle="270.0"
+                        offset="10" />
+    </private>
+    <path name="Fig9.0"
+      description="org.tigris.gef.presentation.FigPoly"
+      fill="0"
+      fillcolor="white"
+      stroke="1"
+      strokecolor="black"
+    >
+      <moveto x="736"
+              y="168" />
+      <lineto x="953"
+              y="168" />
+    </path>
+  </group>
+  <group name="Fig10"
+       description="org.argouml.sequence2.diagram.FigMessage"
+       href="127-0-1-1--2035d03b:1300b171e48:-8000:0000000000000A95"
+       stroke="1"
+       strokecolor="black"
+  >
+    <private>
+      sourcePortFig="Fig4.0"
+      destPortFig="Fig5.0"
+      sourceFigNode="Fig4"
+      destFigNode="Fig5"
+      <argouml:pathitem figname="Fig10.1"
+                        classname="org.argouml.uml.diagram.ui.PathItemPlacement"
+                        figclassname="org.argouml.uml.diagram.ui.FigTextGroup"
+                        ownerhref="127-0-1-1--2035d03b:1300b171e48:-8000:0000000000000A95"
+                        angle="270.0"
+                        offset="10" />
+    </private>
+    <path name="Fig10.0"
+      description="org.tigris.gef.presentation.FigPoly"
+      fill="0"
+      fillcolor="white"
+      stroke="1"
+      strokecolor="black"
+    >
+      <moveto x="973"
+              y="144" />
+      <lineto x="1153"
+              y="144" />
+    </path>
+  </group>
+  <group name="Fig11"
+       description="org.argouml.sequence2.diagram.FigMessage"
+       href="127-0-1-1--2035d03b:1300b171e48:-8000:0000000000000A97"
+       stroke="1"
+       strokecolor="black"
+  >
+    <private>
+      sourcePortFig="Fig5.0"
+      destPortFig="Fig4.0"
+      sourceFigNode="Fig5"
+      destFigNode="Fig4"
+      <argouml:pathitem figname="Fig11.1"
+                        classname="org.argouml.uml.diagram.ui.PathItemPlacement"
+                        figclassname="org.argouml.uml.diagram.ui.FigTextGroup"
+                        ownerhref="127-0-1-1--2035d03b:1300b171e48:-8000:0000000000000A97"
+                        angle="270.0"
+                        offset="10" />
+    </private>
+    <path name="Fig11.0"
+      description="org.tigris.gef.presentation.FigPoly"
+      fill="0"
+      fillcolor="white"
+      stroke="1"
+      strokecolor="black"
+    >
+      <moveto x="1153"
+              y="168" />
+      <lineto x="973"
+              y="168" />
+    </path>
+  </group>
+  <group name="Fig12"
+       description="org.argouml.sequence2.diagram.FigMessage"
+       href="127-0-1-1--2035d03b:1300b171e48:-8000:0000000000000A99"
+       stroke="1"
+       strokecolor="black"
+  >
+    <private>
+      sourcePortFig="Fig4.0"
+      destPortFig="Fig3.0"
+      sourceFigNode="Fig4"
+      destFigNode="Fig3"
+      <argouml:pathitem figname="Fig12.1"
+                        classname="org.argouml.uml.diagram.ui.PathItemPlacement"
+                        figclassname="org.argouml.uml.diagram.ui.FigTextGroup"
+                        ownerhref="127-0-1-1--2035d03b:1300b171e48:-8000:0000000000000A99"
+                        angle="270.0"
+                        offset="10" />
+    </private>
+    <path name="Fig12.0"
+      description="org.tigris.gef.presentation.FigPoly"
+      fill="0"
+      fillcolor="white"
+      stroke="1"
+      strokecolor="black"
+    >
+      <moveto x="953"
+              y="216" />
+      <lineto x="736"
+              y="216" />
+    </path>
+  </group>
+  <group name="Fig13"
+       description="org.argouml.sequence2.diagram.FigMessage"
+       href="127-0-1-1--2035d03b:1300b171e48:-8000:0000000000000A9C"
+       stroke="1"
+       strokecolor="black"
+  >
+    <private>
+      sourcePortFig="Fig3.0"
+      destPortFig="Fig2.0"
+      sourceFigNode="Fig3"
+      destFigNode="Fig2"
+      <argouml:pathitem figname="Fig13.1"
+                        classname="org.argouml.uml.diagram.ui.PathItemPlacement"
+                        figclassname="org.argouml.uml.diagram.ui.FigTextGroup"
+                        ownerhref="127-0-1-1--2035d03b:1300b171e48:-8000:0000000000000A9C"
+                        angle="270.0"
+                        offset="10" />
+    </private>
+    <path name="Fig13.0"
+      description="org.tigris.gef.presentation.FigPoly"
+      fill="0"
+      fillcolor="white"
+      stroke="1"
+      strokecolor="black"
+    >
+      <moveto x="716"
+              y="196" />
+      <lineto x="482"
+              y="196" />
+    </path>
+  </group>
+  <group name="Fig14"
+       description="org.argouml.sequence2.diagram.FigMessage"
+       href="127-0-1-1--2035d03b:1300b171e48:-8000:0000000000000A9E"
+       stroke="1"
+       strokecolor="black"
+  >
+    <private>
+      sourcePortFig="Fig2.0"
+      destPortFig="Fig1.0"
+      sourceFigNode="Fig2"
+      destFigNode="Fig1"
+      <argouml:pathitem figname="Fig14.1"
+                        classname="org.argouml.uml.diagram.ui.PathItemPlacement"
+                        figclassname="org.argouml.uml.diagram.ui.FigTextGroup"
+                        ownerhref="127-0-1-1--2035d03b:1300b171e48:-8000:0000000000000A9E"
+                        angle="270.0"
+                        offset="10" />
+    </private>
+    <path name="Fig14.0"
+      description="org.tigris.gef.presentation.FigPoly"
+      fill="0"
+      fillcolor="white"
+      stroke="1"
+      strokecolor="black"
+    >
+      <moveto x="462"
+              y="176" />
+      <lineto x="277"
+              y="176" />
+    </path>
+  </group>
+  <group name="Fig15"
+       description="org.argouml.sequence2.diagram.FigMessage"
+       href="127-0-1-1--2035d03b:1300b171e48:-8000:0000000000000AA0"
+       stroke="1"
+       strokecolor="black"
+  >
+    <private>
+      sourcePortFig="Fig1.0"
+      destPortFig="Fig0.0"
+      sourceFigNode="Fig1"
+      destFigNode="Fig0"
+      <argouml:pathitem figname="Fig15.1"
+                        classname="org.argouml.uml.diagram.ui.PathItemPlacement"
+                        figclassname="org.argouml.uml.diagram.ui.FigTextGroup"
+                        ownerhref="127-0-1-1--2035d03b:1300b171e48:-8000:0000000000000AA0"
+                        angle="270.0"
+                        offset="10" />
+    </private>
+    <path name="Fig15.0"
+      description="org.tigris.gef.presentation.FigPoly"
+      fill="0"
+      fillcolor="white"
+      stroke="1"
+      strokecolor="black"
+    >
+      <moveto x="257"
+              y="200" />
+      <lineto x="101"
+              y="200" />
+    </path>
+  </group>
+</pgml>
