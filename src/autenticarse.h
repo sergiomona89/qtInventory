@@ -4,7 +4,7 @@
 #include <QWidget>
 #include "ui_autenticarse.h"
 
-class Autenticarse : public QDialog, Ui::Autenticacion
+class Autenticarse : public QDialog, Ui::Autenticarse
 {
     Q_OBJECT
 public:
@@ -12,8 +12,8 @@ public:
 
 signals:
 
-public slots:
-
+protected slots:
+    void autenticar(void);
 };
 
 #endif // AUTENTICARSE_H

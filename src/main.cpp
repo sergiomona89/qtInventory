@@ -1,14 +1,13 @@
 
-#include"DataBase.h"
-#include"Interfaz.h"
-#include<QApplication>
 #include<QDebug>
+#include<QApplication>
+#include"autenticarse.h"
 
 int main(int argc, char **argv)
 {
     QApplication app(argc, argv);
 
-    Interfaz a;
+    Autenticarse a;
     a.show();
 
     return app.exec();
