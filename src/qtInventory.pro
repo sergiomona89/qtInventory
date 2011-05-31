@@ -1,26 +1,33 @@
+
 QT += sql
-HEADERS += DataBase.h \
-    Producto.h \
-    Usuario.h \
-    Bodega.h \
-    DBQueries.h \
-    Administrar.h \
-    Interfaz.h \
-    autenticarse.h \
-    Informacion_usuario_pendi.h \
-    AdministracionUsuario.h
-SOURCES += DataBase.cpp \
-    main.cpp \
-    DBQueries.cpp \
-    Administrar.cpp \
-    Interfaz.cpp \
-    autenticarse.cpp \
-    Informacion_usuario_pendi.cpp \
-    AdministracionUsuario.cpp
-FORMS += autenticarse.ui \
-    administrar.ui \
-    Bodega.ui \
-    Informacion_usuario_pendi.ui \
-    interfaz.ui \
-    Producto.ui \
-    administracion_usuario.ui
+
+INCLUDEPATH += include/
+OBJECTS_DIR = tmp/
+MOC_DIR = tmp/
+UI_DIR = tmp/
+
+HEADERS += include/DataBase.h \
+    include/Producto.h \
+    include/Usuario.h \
+    include/Bodega.h \
+    include/DBQueries.h \
+    include/Administrar.h \
+    include/Interfaz.h \
+    include/autenticarse.h \
+    include/Informacion_usuario_pendi.h \
+    include/AdministracionUsuario.h
+SOURCES += src/DataBase.cpp \
+    src/main.cpp \
+    src/DBQueries.cpp \
+    src/Administrar.cpp \
+    src/Interfaz.cpp \
+    src/autenticarse.cpp \
+    src/Informacion_usuario_pendi.cpp \
+    src/AdministracionUsuario.cpp
+FORMS += uis/autenticarse.ui \
+    uis/administrar.ui \
+    uis/Bodega.ui \
+    uis/Informacion_usuario_pendi.ui \
+    uis/interfaz.ui \
+    uis/Producto.ui \
+    uis/administracion_usuario.ui
