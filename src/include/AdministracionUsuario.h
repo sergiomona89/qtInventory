@@ -7,7 +7,7 @@
 
 class AdministracionUsuario : public QDialog, Ui::administracion_usuario
 {
-Q_OBJECT
+    Q_OBJECT
 public:
     AdministracionUsuario(QWidget *parent = 0);
     ~AdministracionUsuario(void);

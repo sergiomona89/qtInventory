@@ -4,8 +4,8 @@
 
 #include<QtSql>
 
-#define DB_TYPE	"QSQLITE"
-#define DB_NAME "test.sql"
+#define DB_TYPE		"QSQLITE"
+#define DB_NAME		"test.sql"
 
 class DataBase: public QObject {
     Q_OBJECT

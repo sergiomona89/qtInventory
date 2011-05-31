@@ -4,7 +4,7 @@
 #include <QWidget>
 
 namespace Ui {
-    class Crear_bodega;
+class Crear_bodega;
 }
 
 class Crear_bodega : public QWidget

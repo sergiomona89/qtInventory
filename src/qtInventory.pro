@@ -17,7 +17,7 @@ HEADERS += include/DataBase.h \
     include/Informacion_usuario_pendi.h \
     include/AdministracionUsuario.h
 SOURCES += src/DataBase.cpp \
-    src/main.cpp \
+    test/main.cpp \
     src/DBQueries.cpp \
     src/Administrar.cpp \
     src/Interfaz.cpp \

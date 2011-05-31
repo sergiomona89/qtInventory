@@ -4,7 +4,7 @@
 #include <QWidget>
 
 namespace Ui {
-    class Crear_producto;
+class Crear_producto;
 }
 
 class Crear_producto : public QWidget

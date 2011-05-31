@@ -2,6 +2,11 @@
 #define DBQUERIES_H
 
 #include<QtCore>
+#include"Usuario.h"
+// #include "../../../../MySources/kdebase/tmp/src/KeyboardTranslator.h"
+
+typedef QList<Usuario> UsuarioList;
+typedef QList<Usuario>::iterator UsuarioListIterator;
 
 class DBQueries: public QObject
 {
@@ -9,6 +14,8 @@ class DBQueries: public QObject
 public:
     DBQueries(QObject * parent = 0);
     ~DBQueries(void);
+
+    static UsuarioList * usuarios(void);
 };
 
 #endif // DBQUERIES_H

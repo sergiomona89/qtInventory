@@ -7,8 +7,8 @@
 class Usuario
 {
 public:
-    Usuario(void);
-    ~Usuario(void);
+    Usuario(void): Cargo(""), Contrasena(""), Email(""), Id(0), Nombre(""), Telefono(0) {}
+    ~Usuario(void) {}
 
     QString getCargo(void);
     QString getContrasena(void);
@@ -20,7 +20,7 @@ public:
     void setCargo(QString cargo);
     void setContrasena(QString contrasena);
     void setEmail(QString email);
-    void setId(QString id);
+    void setId(int id);
     void setNombre(QString nombre);
     void setTelefono(int telefono);
 
@@ -35,7 +35,7 @@ protected:
 
 inline QString Usuario::getCargo()
 {
-return Cargo;
+    return Cargo;
 }
 
 inline QString Usuario::getContrasena()
@@ -78,7 +78,7 @@ inline void Usuario::setEmail(QString email)
     Email = email;
 }
 
-inline void Usuario::setId(QString id)
+inline void Usuario::setId(int id)
 {
     Id = id;
 }

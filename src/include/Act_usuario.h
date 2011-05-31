@@ -4,7 +4,7 @@
 #include <QWidget>
 
 namespace Ui {
-    class Act_usuario;
+class Act_usuario;
 }
 
 class Act_usuario : public QWidget

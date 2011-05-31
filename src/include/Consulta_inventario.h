@@ -4,7 +4,7 @@
 #include <QWidget>
 
 namespace Ui {
-    class Consulta_inventario;
+class Consulta_inventario;
 }
 
 class Consulta_inventario : public QWidget

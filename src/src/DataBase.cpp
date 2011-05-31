@@ -8,7 +8,7 @@ DataBase::DataBase(QObject * parent):
 {
     db = new QSqlDatabase;
 
-    QString db_path;
+    QString db_path = DB_NAME;
 
     db = new QSqlDatabase(QSqlDatabase::addDatabase(DB_TYPE, DB_NAME));
     db->setDatabaseName(db_path);

@@ -17,7 +17,7 @@ public:
     void setNombre(QString nombre);
     void setTelefono(int telefono);
 
-    protected:
+protected:
     QString Direccion;
     QString Nombre;
     int telefono;
