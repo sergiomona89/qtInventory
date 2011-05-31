@@ -5,11 +5,21 @@
 #include "DataBase.h"
 #include "autenticarse.h"
 #include "DBQueries.h"
+#include "Info_usuario.h"
+
+int db_options(int &argc, char **argv);
+int gui(int &argc, char **argv);
 
 void create_db(void);
 void mostar_usuarios(void);
 
+
 int main(int argc, char **argv)
+{
+    return gui(argc, argv);
+}
+
+int db_options(int& argc, char** argv)
 {
     if(argc == 1)
     {
@@ -35,12 +45,23 @@ HELP:
     }
 
     return 0;
-//     QApplication app(argc, argv);
-//
-//     Autenticarse a;
-//     a.show();
-//
-//     return app.exec();
+}
+
+int gui(int &argc, char **argv)
+{
+    QApplication app(argc, argv);
+
+    UsuarioList * ul = DBQueries::usuarios();
+
+    for(UsuarioListIterator it = ul->begin(); it != ul->end(); it++)
+    {
+        Info_usuario * inf = new Info_usuario(*it);
+        inf->show();
+    }
+
+    delete ul;
+
+    return app.exec();
 }
 
 void create_db()

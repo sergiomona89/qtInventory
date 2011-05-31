@@ -8,7 +8,7 @@ class Informacion_usuario_pendi : public QDialog, Ui::Dialog
 {
     Q_OBJECT
 public:
-    explicit Informacion_usuario_pendi(QWidget *parent = 0);
+    Informacion_usuario_pendi(QWidget *parent = 0);
 
 signals:
 

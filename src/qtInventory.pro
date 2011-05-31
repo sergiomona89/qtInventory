@@ -12,6 +12,7 @@ HEADERS += include/DataBase.h \
     include/Bodega.h \
     include/DBQueries.h \
     include/Administrar.h \
+    include/Info_usuario.h \
     include/Interfaz.h \
     include/autenticarse.h \
     include/Informacion_usuario_pendi.h \
@@ -20,6 +21,7 @@ SOURCES += src/DataBase.cpp \
     test/main.cpp \
     src/DBQueries.cpp \
     src/Administrar.cpp \
+    src/Info_usuario.cpp \
     src/Interfaz.cpp \
     src/autenticarse.cpp \
     src/Informacion_usuario_pendi.cpp \
@@ -27,6 +29,7 @@ SOURCES += src/DataBase.cpp \
 FORMS += uis/autenticarse.ui \
     uis/administrar.ui \
     uis/Bodega.ui \
+    uis/Info_usuario.ui \
     uis/Informacion_usuario_pendi.ui \
     uis/interfaz.ui \
     uis/Producto.ui \

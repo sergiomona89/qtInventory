@@ -1,22 +1,19 @@
+
 #ifndef INFO_USUARIO_H
 #define INFO_USUARIO_H
 
 #include <QWidget>
+#include "Usuario.h"
+#include "ui_Info_usuario.h"
 
-namespace Ui {
-class Info_usuario;
-}
-
-class Info_usuario : public QWidget
+class Info_usuario : public QWidget, Ui::Info_usuario
 {
     Q_OBJECT
-
 public:
-    explicit Info_usuario(QWidget *parent = 0);
+    Info_usuario(Usuario &usr, QWidget *parent = 0);
     ~Info_usuario();
 
-private:
-    Ui::Info_usuario *ui;
+    void setUsuario(Usuario &usr);
 };
 
 #endif // INFO_USUARIO_H

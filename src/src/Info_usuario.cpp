@@ -1,14 +1,26 @@
-#include "Info_usuario.h"
-#include "ui_Info_usuario.h"
 
-Info_usuario::Info_usuario(QWidget *parent) :
-    QWidget(parent),
-    ui(new Ui::Info_usuario)
+#include "Info_usuario.h"
+
+
+Info_usuario::Info_usuario(Usuario &usr, QWidget *parent) :
+    QWidget(parent)
 {
-    ui->setupUi(this);
+    setupUi(this);
+
+    setUsuario(usr);
+
+    connect(AceptarPushButton, SIGNAL(clicked(void)), this, SLOT(close()));
 }
 
 Info_usuario::~Info_usuario()
 {
-    delete ui;
+}
+
+void Info_usuario::setUsuario(Usuario &usr)
+{
+    IdLabel->setText(QString::number(usr.getId()));
+    NombreLabel->setText(usr.getNombre());
+    CargoLabel->setText(usr.getCargo());
+    EmailLabel->setText(usr.getEmail());
+    TelefonoLabel->setText(QString::number(usr.getTelefono()));
 }
