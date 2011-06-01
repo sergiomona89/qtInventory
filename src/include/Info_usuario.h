@@ -3,15 +3,16 @@
 #define INFO_USUARIO_H
 
 #include <QWidget>
-#include "Usuario.h"
 #include "ui_Info_usuario.h"
+
+class Usuario;
 
 class Info_usuario : public QWidget, Ui::Info_usuario
 {
     Q_OBJECT
 public:
     Info_usuario(Usuario &usr, QWidget *parent = 0);
-    ~Info_usuario();
+    ~Info_usuario(void) {}
 
     void setUsuario(Usuario &usr);
 };

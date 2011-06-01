@@ -3,19 +3,14 @@
 #define ADMINISTRACIONUSUARIO_H
 
 #include <QWidget>
-#include"ui_administracion_usuario.h"
+#include"ui_AdministracionUsuario.h"
 
-class AdministracionUsuario : public QDialog, Ui::administracion_usuario
+class AdministracionUsuario : public QDialog, Ui::AdministracionUsuario
 {
     Q_OBJECT
 public:
     AdministracionUsuario(QWidget *parent = 0);
     ~AdministracionUsuario(void);
-
-signals:
-
-public slots:
-
 };
 
 #endif // ADMINISTRACIONUSUARIO_H

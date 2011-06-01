@@ -1,4 +1,5 @@
 
+#include "Usuario.h"
 #include "Info_usuario.h"
 
 
@@ -10,10 +11,6 @@ Info_usuario::Info_usuario(Usuario &usr, QWidget *parent) :
     setUsuario(usr);
 
     connect(AceptarPushButton, SIGNAL(clicked(void)), this, SLOT(close()));
-}
-
-Info_usuario::~Info_usuario()
-{
 }
 
 void Info_usuario::setUsuario(Usuario &usr)

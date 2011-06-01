@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>372</width>
-    <height>207</height>
+    <width>487</width>
+    <height>303</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -55,6 +55,16 @@
      </widget>
     </item>
    </layout>
+  </widget>
+  <widget class="QComboBox" name="comboBox">
+   <property name="geometry">
+    <rect>
+     <x>170</x>
+     <y>200</y>
+     <width>85</width>
+     <height>27</height>
+    </rect>
+   </property>
   </widget>
  </widget>
  <tabstops>

@@ -39,3 +39,16 @@ UsuarioList * DBQueries::usuarios(void)
 
     return ul;
 }
+
+bool DBQueries::guardarUsuario(Usuario &usr)
+{
+    DataBase * db = new DataBase;
+
+    QSqlQuery query = db->dataBase()->exec();
+
+    bool insert = query.exec("INSERT INTO tbusuario (id, nombre, cargo, contrasena, email, telefono) VALUES ("+QString::number(usr.getId())+", '" +usr.getNombre()+"', '"+usr.getCargo()+"', '"+usr.getContrasena()+"', '"+usr.getEmail()+"', "+QString::number(usr.getTelefono())+")");
+
+    delete db;
+
+    return insert;
+}

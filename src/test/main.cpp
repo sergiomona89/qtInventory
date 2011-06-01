@@ -6,6 +6,7 @@
 #include "autenticarse.h"
 #include "DBQueries.h"
 #include "Info_usuario.h"
+#include "AdministracionUsuario.h"
 
 int db_options(int &argc, char **argv);
 int gui(int &argc, char **argv);
@@ -16,6 +17,7 @@ void mostar_usuarios(void);
 
 int main(int argc, char **argv)
 {
+//    return db_options(argc, argv);
     return gui(argc, argv);
 }
 
@@ -51,15 +53,8 @@ int gui(int &argc, char **argv)
 {
     QApplication app(argc, argv);
 
-    UsuarioList * ul = DBQueries::usuarios();
-
-    for(UsuarioListIterator it = ul->begin(); it != ul->end(); it++)
-    {
-        Info_usuario * inf = new Info_usuario(*it);
-        inf->show();
-    }
-
-    delete ul;
+    AdministracionUsuario admin;
+    admin.show();
 
     return app.exec();
 }

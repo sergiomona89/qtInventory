@@ -18,6 +18,7 @@ public:
     ~DBQueries(void);
 
     static UsuarioList * usuarios(void);
+    static bool guardarUsuario(Usuario &usr);
 };
 
 #endif // DBQUERIES_H
