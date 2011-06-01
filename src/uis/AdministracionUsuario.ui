@@ -6,63 +6,87 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>492</width>
-    <height>255</height>
+    <width>566</width>
+    <height>336</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Administracion de usuario</string>
   </property>
-  <widget class="QWidget" name="layoutWidget">
-   <property name="geometry">
-    <rect>
-     <x>80</x>
-     <y>40</y>
-     <width>349</width>
-     <height>161</height>
-    </rect>
-   </property>
-   <layout class="QGridLayout" name="gridLayout">
-    <item row="0" column="0" rowspan="5">
-     <widget class="QListWidget" name="list_usuario"/>
-    </item>
-    <item row="0" column="1">
-     <widget class="QPushButton" name="Crear_usuario">
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="0" rowspan="4">
+    <widget class="QTreeWidget" name="UsuariosTreeWidget">
+     <property name="alternatingRowColors">
+      <bool>true</bool>
+     </property>
+     <property name="rootIsDecorated">
+      <bool>false</bool>
+     </property>
+     <property name="columnCount">
+      <number>5</number>
+     </property>
+     <column>
       <property name="text">
-       <string>Crear</string>
+       <string notr="true">1</string>
       </property>
-     </widget>
-    </item>
-    <item row="1" column="1">
-     <widget class="QPushButton" name="Actualizar_usuario">
+     </column>
+     <column>
       <property name="text">
-       <string>Actualizar</string>
+       <string notr="true">2</string>
       </property>
-     </widget>
-    </item>
-    <item row="2" column="1">
-     <widget class="QPushButton" name="Consultar_usuario">
+     </column>
+     <column>
       <property name="text">
-       <string>Consultar</string>
+       <string notr="true">3</string>
       </property>
-     </widget>
-    </item>
-    <item row="3" column="1">
-     <widget class="QPushButton" name="Eliminar_usuario">
+     </column>
+     <column>
       <property name="text">
-       <string>Eliminar </string>
+       <string notr="true">4</string>
       </property>
-     </widget>
-    </item>
-    <item row="4" column="1">
-     <widget class="QPushButton" name="Cancelar_usuario">
+     </column>
+     <column>
       <property name="text">
-       <string>Cancelar</string>
+       <string notr="true">5</string>
       </property>
-     </widget>
-    </item>
-   </layout>
-  </widget>
+     </column>
+    </widget>
+   </item>
+   <item row="0" column="1">
+    <widget class="QPushButton" name="NuevoPushButton">
+     <property name="text">
+      <string>Nuevo</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="1">
+    <widget class="QPushButton" name="ActualizarPushButton">
+     <property name="text">
+      <string>Actualizar</string>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="1">
+    <widget class="QPushButton" name="EliminarPushButton">
+     <property name="text">
+      <string>Eliminar </string>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="1">
+    <spacer name="verticalSpacer">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>154</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+  </layout>
  </widget>
  <resources/>
  <connections/>

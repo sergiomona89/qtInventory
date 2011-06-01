@@ -7,6 +7,7 @@ MOC_DIR = tmp/
 UI_DIR = tmp/
 
 HEADERS += include/DataBase.h \
+    include/Act_usuario.h \
     include/Producto.h \
     include/Usuario.h \
     include/Bodega.h \
@@ -19,6 +20,7 @@ HEADERS += include/DataBase.h \
     include/AdministracionUsuario.h \
     include/Crear_usuario.h
 SOURCES += src/DataBase.cpp \
+    src/Act_usuario.cpp \
     test/main.cpp \
     src/DBQueries.cpp \
     src/Administrar.cpp \
@@ -30,6 +32,7 @@ SOURCES += src/DataBase.cpp \
     src/Crear_usuario.cpp
 FORMS += uis/autenticarse.ui \
     uis/administrar.ui \
+    uis/Act_usuario.ui \
     uis/Bodega.ui \
     uis/Info_usuario.ui \
     uis/Informacion_usuario_pendi.ui \

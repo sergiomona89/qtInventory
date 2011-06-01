@@ -1,22 +1,18 @@
+
 #ifndef ACT_USUARIO_H
 #define ACT_USUARIO_H
 
 #include <QWidget>
+#include "ui_Act_usuario.h"
 
-namespace Ui {
-class Act_usuario;
-}
-
-class Act_usuario : public QWidget
+class Act_usuario : public QDialog, Ui::Act_usuario
 {
     Q_OBJECT
-
 public:
-    explicit Act_usuario(QWidget *parent = 0);
-    ~Act_usuario();
+    Act_usuario(QString nombre, QString cargo, int id, QWidget *parent = 0);
 
-private:
-    Ui::Act_usuario *ui;
+protected slots:
+    void actualizar(void);
 };
 
 #endif // ACT_USUARIO_H

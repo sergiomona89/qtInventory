@@ -1,14 +1,48 @@
 
+
 #include "DBQueries.h"
 #include "DataBase.h"
 
-DBQueries::DBQueries(QObject * parent):
-    QObject(parent)
+
+void DBQueries::actualizarUsuario(QString nombre, QString cargo, int id, QString contrasena)
 {
+    Usuario * usr = usuario(id);
+
+    usr->setNombre(nombre);
+    usr->setCargo(cargo);
+    usr->setId(id);
+    if(contrasena != "")
+    {
+        usr->setContrasena(contrasena);
+    }
+
+    eliminarUsuario(id);
+    guardarUsuario(*usr);
+
+    delete usr;
 }
 
-DBQueries::~DBQueries()
+Usuario * DBQueries::usuario(int id)
 {
+    DataBase * db = new DataBase;
+
+    QSqlQuery query = db->dataBase()->exec();
+
+    if(query.exec("SELECT tbusuario.id, tbusuario.nombre, tbusuario.cargo, tbusuario.contrasena, tbusuario.email, tbusuario.telefono FROM tbusuario WHERE tbusuario.id="+QString::number(id)) && query.next())
+    {
+        Usuario * u = new Usuario;
+
+        u->setId(query.value(0).toInt());
+        u->setNombre(query.value(1).toString());
+        u->setCargo(query.value(2).toString());
+        u->setContrasena(query.value(3).toString());
+        u->setEmail(query.value(4).toString());
+        u->setTelefono(query.value(5).toInt());
+
+        return u;
+    }
+
+    return 0;
 }
 
 UsuarioList * DBQueries::usuarios(void)
@@ -51,4 +85,15 @@ bool DBQueries::guardarUsuario(Usuario &usr)
     delete db;
 
     return insert;
+}
+
+void DBQueries::eliminarUsuario(int id)
+{
+    DataBase * db = new DataBase;
+
+    QSqlQuery query = db->dataBase()->exec();
+
+    query.exec("DELETE FROM tbusuario WHERE tbusuario.id=" + QString::number(id));
+
+    delete db;
 }

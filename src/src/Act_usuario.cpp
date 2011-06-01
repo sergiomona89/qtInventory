@@ -1,14 +1,30 @@
-#include "Act_usuario.h"
-#include "ui_Act_usuario.h"
 
-Act_usuario::Act_usuario(QWidget *parent) :
-    QWidget(parent),
-    ui(new Ui::Act_usuario)
+#include "Act_usuario.h"
+#include "DBQueries.h"
+
+Act_usuario::Act_usuario(QString nombre, QString cargo, int id, QWidget *parent) :
+    QDialog(parent)
 {
-    ui->setupUi(this);
+    setupUi(this);
+
+    NombreLineEdit->setText(nombre);
+    CargoLineEdit->setText(cargo);
+    IdLineEdit->setText(QString::number(id));
+
+    connect(AceptarPushButton, SIGNAL(clicked(void)), this, SLOT(actualizar(void)));
+    connect(CancelarPushButton, SIGNAL(clicked(void)), this, SLOT(reject(void)));
 }
 
-Act_usuario::~Act_usuario()
+void Act_usuario::actualizar(void)
 {
-    delete ui;
+    if(ModificarCheckBox->checkState() == Qt::Checked)
+    {
+        DBQueries::actualizarUsuario(NombreLineEdit->text(), CargoLineEdit->text(), IdLineEdit->text().toInt(), NuevaContrasenaLineEdit->text());
+    }
+    else
+    {
+        DBQueries::actualizarUsuario(NombreLineEdit->text(), CargoLineEdit->text(), IdLineEdit->text().toInt());
+    }
+
+    accept();
 }
