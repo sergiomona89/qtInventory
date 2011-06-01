@@ -21,7 +21,6 @@ HEADERS += include/DataBase.h \
     include/Crear_usuario.h
 SOURCES += src/DataBase.cpp \
     src/Act_usuario.cpp \
-    test/main.cpp \
     src/DBQueries.cpp \
     src/Administrar.cpp \
     src/Info_usuario.cpp \
@@ -40,3 +39,13 @@ FORMS += uis/autenticarse.ui \
     uis/Producto.ui \
     uis/AdministracionUsuario.ui \
     uis/Crear_usuario.ui
+
+server {
+    TARGET = server
+    SOURCES += test/server.cpp
+}
+
+client {
+    TARGET = client
+    SOURCES += test/client.cpp
+}

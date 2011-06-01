@@ -17,6 +17,7 @@ void mostar_usuarios(void);
 
 int main(int argc, char **argv)
 {
+    qDebug() << "client";
 //    return db_options(argc, argv);
     return gui(argc, argv);
 }
