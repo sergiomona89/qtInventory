@@ -1,12 +1,14 @@
 
 QT += sql
+QT += network
 
 INCLUDEPATH += include/
 OBJECTS_DIR = tmp/
 MOC_DIR = tmp/
 UI_DIR = tmp/
 
-HEADERS += include/DataBase.h \
+HEADERS += include/Servidor.h \
+    include/DataBase.h \
     include/Act_usuario.h \
     include/Producto.h \
     include/Usuario.h \
@@ -20,7 +22,8 @@ HEADERS += include/DataBase.h \
     include/AdministracionUsuario.h \
     include/Crear_usuario.h \
     include/types.h
-SOURCES += src/DataBase.cpp \
+SOURCES += src/Servidor.cpp \
+    src/DataBase.cpp \
     src/Act_usuario.cpp \
     src/DBQueries.cpp \
     src/Administrar.cpp \
