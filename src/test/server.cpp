@@ -18,7 +18,6 @@
 #include "Info_usuario.h"
 #include "AdministracionUsuario.h"
 
-
 #define PUERTO	3490
 #define RUTA	108
 #define TAM_BUF	260
@@ -64,27 +63,27 @@ int main(int argc, char **argv)
             exit(-1);
         }
 
-        Peticion p;
+        Peticion * p = reinterpret_cast<Peticion*>(ruta);
 
-        if(p == Autenticar)
+        if(*p == Autenticar)
         {
-// 	    _peticion = Autenticar;
+            qDebug() << "autenticar";
             char id[10];
             char contrasena[100];
-            if(recvfrom(ret_socket, id, RUTA , 0,(struct sockaddr *)user, &size) == -1)
+            if(recvfrom(ret_socket, id, 10 , 0,(struct sockaddr *)user, &size) == -1)
             {
                 std::cout << "usuario error" << std::endl;
                 continue;
             }
-            if(recvfrom(ret_socket, contrasena, RUTA , 0,(struct sockaddr *)user, &size) == -1)
+            qDebug() << id;
+            if(recvfrom(ret_socket, contrasena, 100 , 0,(struct sockaddr *)user, &size) == -1)
             {
                 std::cout << "contraseña error" << std::endl;
                 continue;
             }
-            bool  aut = DBQueries::autenticar(QString(id).toInt(), contrasena);
-//             Respuesta r = done;
-//             sendto(ret_socket, (char *) &r, sizeof(Respuesta), 0, (struct sockaddr *) user, size);
-// 	    continue;
+            qDebug() << contrasena;
+            int aut = DBQueries::autenticar(QString(id).toInt(), contrasena);
+            sendto(ret_socket, (char *) &aut, sizeof(int), 0, (struct sockaddr *) user, size);
         }
         else
         {

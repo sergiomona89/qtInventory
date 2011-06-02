@@ -3,21 +3,23 @@
 #include "DBQueries.h"
 #include "DataBase.h"
 
-bool DBQueries::autenticar(int id, QString contrasena)
+int DBQueries::autenticar(int id, QString contrasena)
 {
     DataBase * db = new DataBase;
 
     QSqlQuery query = db->dataBase()->exec();
-    query.exec("SELECT tbplugin.id FROM tbplugin WHERE tbplugin.id="+QString::number(id)+" AND tbplugin.contrasena='"+contrasena+"'");
+    if(query.exec("SELECT tbplugin.id FROM tbplugin WHERE tbplugin.id="+QString::number(id)+" AND tbplugin.contrasena='"+contrasena+"'"))
+        return 0;
+
     if(query.next())
     {
         delete db;
-        return true;
+        return 1;
     }
     else
     {
         delete db;
-        return false;
+        return 2;
     }
 }
 
