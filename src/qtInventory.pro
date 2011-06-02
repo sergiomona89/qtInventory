@@ -18,7 +18,8 @@ HEADERS += include/DataBase.h \
     include/autenticarse.h \
     include/Informacion_usuario_pendi.h \
     include/AdministracionUsuario.h \
-    include/Crear_usuario.h
+    include/Crear_usuario.h \
+    include/types.h
 SOURCES += src/DataBase.cpp \
     src/Act_usuario.cpp \
     src/DBQueries.cpp \
