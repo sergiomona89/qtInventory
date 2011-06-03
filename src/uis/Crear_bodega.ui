@@ -13,48 +13,35 @@
   <property name="windowTitle">
    <string>Form</string>
   </property>
-  <widget class="QLabel" name="telefonoLabel">
+  <widget class="QLineEdit" name="nombreLineEdit">
    <property name="geometry">
     <rect>
-     <x>60</x>
-     <y>80</y>
-     <width>81</width>
-     <height>16</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Telefono</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="nombreLabel">
-   <property name="geometry">
-    <rect>
-     <x>60</x>
+     <x>160</x>
      <y>20</y>
-     <width>51</width>
-     <height>16</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Nombre</string>
-   </property>
-  </widget>
-  <widget class="QLineEdit" name="telefonoLineEdit">
-   <property name="geometry">
-    <rect>
-     <x>170</x>
-     <y>80</y>
      <width>151</width>
      <height>20</height>
     </rect>
    </property>
   </widget>
+  <widget class="QPushButton" name="aceptarPushButton">
+   <property name="geometry">
+    <rect>
+     <x>80</x>
+     <y>190</y>
+     <width>75</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Aceptar</string>
+   </property>
+  </widget>
   <widget class="QLabel" name="descripcionLabel">
    <property name="geometry">
     <rect>
-     <x>60</x>
+     <x>50</x>
      <y>110</y>
-     <width>61</width>
+     <width>81</width>
      <height>16</height>
     </rect>
    </property>
@@ -62,12 +49,35 @@
     <string>Descripcion</string>
    </property>
   </widget>
+  <widget class="QPushButton" name="cancelarPushButton">
+   <property name="geometry">
+    <rect>
+     <x>180</x>
+     <y>190</y>
+     <width>75</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Cancelar</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="telefonoLineEdit">
+   <property name="geometry">
+    <rect>
+     <x>160</x>
+     <y>80</y>
+     <width>151</width>
+     <height>20</height>
+    </rect>
+   </property>
+  </widget>
   <widget class="QLabel" name="ubicacionLabel">
    <property name="geometry">
     <rect>
-     <x>60</x>
+     <x>50</x>
      <y>50</y>
-     <width>51</width>
+     <width>71</width>
      <height>16</height>
     </rect>
    </property>
@@ -78,57 +88,47 @@
   <widget class="QLineEdit" name="ubicacionLineEdit">
    <property name="geometry">
     <rect>
-     <x>170</x>
+     <x>160</x>
      <y>50</y>
      <width>151</width>
      <height>20</height>
     </rect>
    </property>
   </widget>
-  <widget class="QLineEdit" name="nombreLineEdit">
+  <widget class="QLabel" name="nombreLabel">
    <property name="geometry">
     <rect>
-     <x>170</x>
+     <x>50</x>
      <y>20</y>
-     <width>151</width>
-     <height>20</height>
+     <width>51</width>
+     <height>16</height>
     </rect>
+   </property>
+   <property name="text">
+    <string>Nombre</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="telefonoLabel">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>80</y>
+     <width>81</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Telefono</string>
    </property>
   </widget>
   <widget class="QTextEdit" name="descripcionTextEdit">
    <property name="geometry">
     <rect>
-     <x>170</x>
+     <x>160</x>
      <y>110</y>
      <width>151</width>
      <height>41</height>
     </rect>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="aceptarPushButton">
-   <property name="geometry">
-    <rect>
-     <x>90</x>
-     <y>190</y>
-     <width>75</width>
-     <height>23</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Aceptar</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="cancelarPushButton">
-   <property name="geometry">
-    <rect>
-     <x>190</x>
-     <y>190</y>
-     <width>75</width>
-     <height>23</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Cancelar</string>
    </property>
   </widget>
  </widget>

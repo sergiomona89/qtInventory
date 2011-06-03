@@ -5,6 +5,7 @@
 
 #include<QtCore>
 #include "Usuario.h"
+#include "Bodega.h"
 
 typedef QList<Usuario> UsuarioList;
 typedef QList<Usuario>::iterator UsuarioListIterator;
@@ -23,6 +24,10 @@ public:
     static UsuarioList * usuarios(void);
     static bool guardarUsuario(Usuario &usr);
     static void eliminarUsuario(int id);
+    static Bodega * bodega(int telefono);
+    static bool guardarBodega(Bodega &bdg);
+    static void actualizarBodega(QString nombre = QString(""), QString direccion = QString(""), int telefono = 0, QString descripcion = QString(""));
+    static void eliminarBodega(int telefono);
 };
 
 #endif // DBQUERIES_H

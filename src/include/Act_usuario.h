@@ -13,6 +13,7 @@ public:
 
 protected slots:
     void actualizar(void);
+    void esChecked(void);
 };
 
 #endif // ACT_USUARIO_H

@@ -11,8 +11,11 @@ Act_usuario::Act_usuario(QString nombre, QString cargo, int id, QWidget *parent)
     NombreLineEdit->setText(nombre);
     CargoLineEdit->setText(cargo);
     IdLineEdit->setText(QString::number(id));
+    ContrasenaLineEdit->setEchoMode(QLineEdit::Password);
     ContrasenaLineEdit->setEnabled(false);
+    NuevaContrasenaLineEdit->setEchoMode(QLineEdit::Password);
     NuevaContrasenaLineEdit->setEnabled(false);
+    ConfirmarContrasenaLineEdit->setEchoMode(QLineEdit::Password);
     ConfirmarContrasenaLineEdit->setEnabled(false);
     IdLineEdit->setEnabled(false);
 

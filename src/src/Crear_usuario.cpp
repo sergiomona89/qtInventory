@@ -8,6 +8,8 @@ Crear_usuario::Crear_usuario(QWidget *parent) :
 {
     setupUi(this);
     setWindowTitle("Crear Usuario");
+    contrasenaLineEdit->setEchoMode(QLineEdit::Password);
+    cContrasenaLineEdit->setEchoMode(QLineEdit::Password);
 
     connect(aceptarPushButton, SIGNAL(clicked(void)), this, SLOT(crear(void)));
     connect(cancelarPushButton, SIGNAL(clicked(void)), this, SLOT(reject(void)));

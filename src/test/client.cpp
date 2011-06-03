@@ -19,7 +19,7 @@ void mostar_usuarios(void);
 int main(int argc, char **argv)
 {
     qDebug() << "client";
-//    return db_options(argc, argv);
+   // return db_options(argc, argv);
     return gui(argc, argv);
 }
 
@@ -68,7 +68,7 @@ void create_db()
     QSqlQuery query = db->dataBase()->exec();
 
     if(query.exec("CREATE TABLE IF NOT EXISTS tbusuario (\
-		  id INTEGER PRIMARY KEY AUTOINCREMENT,\
+                  id INTEGER PRIMARY KEY AUTOINCREMENT,\
 		  nombre VARCHAR(50) NOT NULL,\
 		  cargo VARCHAR(50) NOT NULL,\
 		  contrasena VARCHAR(50) NOT NULL,\
@@ -84,7 +84,24 @@ void create_db()
         exit(-1);
     }
 
+            if(query.exec("CREATE TABLE IF NOT EXISTS tbbodega (\
+                          id INTEGER PRIMARY KEY AUTOINCREMENT,\
+                          nombre VARCHAR(50) NOT NULL,\
+                          ubicacion VARCHAR(50) NOT NULL,\
+                          descripcion VARCHAR(300) NOT NULL,\
+                          telefono INTEGER NOT NULL)"))
+            {
+                qDebug() << "creamos la tabla bodega";
+            }
+            else
+            {
+                qDebug() << "error al crear la tabla bodega";
+                delete db;
+                exit(-1);
+            }
+
     query.exec("INSERT INTO tbusuario (nombre, cargo, contrasena, email, telefono) VALUES ('yo', 'admin', 'pass', 'yo@tu.com', 1234)");
+               query.exec("INSERT INTO tbbodega (nombre, ubicacion, telefono, descripcion) VALUES ('la 35', 'cll 35 # 35-35', 555000, 'blablabla')");
 
     delete db;
 }

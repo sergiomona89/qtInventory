@@ -21,7 +21,8 @@ HEADERS += include/Servidor.h \
     include/Informacion_usuario_pendi.h \
     include/AdministracionUsuario.h \
     include/Crear_usuario.h \
-    include/types.h
+    include/types.h \
+    Crear_bodega.h
 SOURCES += src/Servidor.cpp \
     src/DataBase.cpp \
     src/Act_usuario.cpp \
@@ -32,7 +33,8 @@ SOURCES += src/Servidor.cpp \
     src/autenticarse.cpp \
     src/Informacion_usuario_pendi.cpp \
     src/AdministracionUsuario.cpp \
-    src/Crear_usuario.cpp
+    src/Crear_usuario.cpp \
+    Crear_bodega.cpp
 FORMS += uis/autenticarse.ui \
     uis/administrar.ui \
     uis/Act_usuario.ui \
@@ -42,7 +44,8 @@ FORMS += uis/autenticarse.ui \
     uis/interfaz.ui \
     uis/Producto.ui \
     uis/AdministracionUsuario.ui \
-    uis/Crear_usuario.ui
+    uis/Crear_usuario.ui \
+    Crear_bodega.ui
 
 server {
     TARGET = server

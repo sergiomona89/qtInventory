@@ -1,22 +1,21 @@
+
 #ifndef CREAR_BODEGA_H
 #define CREAR_BODEGA_H
 
-#include <QWidget>
+#include <QDialog>
+#include "Bodega.h"
+#include "ui_Crear_bodega.h"
+#include "DBQueries.h"
 
-namespace Ui {
-class Crear_bodega;
-}
-
-class Crear_bodega : public QWidget
+class Crear_bodega : public QDialog, Ui::Crear_bodega
 {
     Q_OBJECT
 
 public:
-    explicit Crear_bodega(QWidget *parent = 0);
-    ~Crear_bodega();
+    Crear_bodega(QWidget *parent = 0);
 
-private:
-    Ui::Crear_bodega *ui;
+public slots:
+    void crear(void);
 };
 
 #endif // CREAR_BODEGA_H

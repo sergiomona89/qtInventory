@@ -116,3 +116,66 @@ void DBQueries::eliminarUsuario(int id)
 
     delete db;
 }
+
+Bodega * DBQueries::bodega(int telefono)
+{
+    DataBase * db = new DataBase;
+
+    QSqlQuery query = db->dataBase()->exec();
+
+    if(query.exec("SELECT tbbodega.nombre, tbbodega.ubicacion, tbbodega.telefono, tbbodega.descripcion FROM tbbodega WHERE tbbodega.telefono="+QString::number(telefono)) && query.next())
+    {
+        Bodega * bdg = new Bodega;
+
+        bdg->setNombre(query.value(0).toInt());
+        bdg->setDireccion(query.value(1).toString());
+        bdg->setTelefono(query.value(2).toInt());
+        bdg->setDescripcion(query.value(3).toString());
+
+        return u;
+    }
+
+    return 0;
+}
+
+bool DBQueries::guardarBodega(Bodega &bdg)
+{
+    DataBase * db = new DataBase;
+
+    QSqlQuery query = db->dataBase()->exec();
+
+    bool insert = query.exec("INSERT INTO tbbodega (nombre, ubicacion, descripcion, telefono) VALUES ('"+bdg.getNombre()+"', '"+bdg.getUbicacion()+"', '"+bdg.getDescripcion()+"', "+QString::number(bdg.getTelefono())+")");
+
+    delete db;
+
+    return insert;
+}
+
+void DBQueries::eliminarBodega(int telefono)
+{
+    DataBase * db = new DataBase;
+
+    QSqlQuery query = db->dataBase()->exec();
+
+    query.exec("DELETE FROM tbbodega WHERE tbbodega.telefono=" + QString::number(telefono));
+
+    delete db;
+}
+
+void DBQueries::actualizarBodega(QString nombre, QString direccion, int telefono, QString descripcion)
+{//arreglar esta parte.
+    Bodega * bdg = bodega(telefono);
+
+    bdg->setNombre(nombre);
+    bdg->setDireccion(direccion);
+    bdg->setDescripcion(descripcion);
+    if(contrasena != "")
+    {
+        usr->setContrasena(contrasena);
+    }
+
+    eliminarUsuario(id);
+    guardarUsuario(*usr);
+
+    delete usr;
+}
