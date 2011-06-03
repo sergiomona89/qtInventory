@@ -55,7 +55,7 @@ int gui(int &argc, char **argv)
 {
     QApplication app(argc, argv);
 
-    Autenticarse au;
+    AdministracionUsuario au;
     au.show();
 
     return app.exec();
