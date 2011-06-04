@@ -2,28 +2,32 @@
 #ifndef BODEGA_H
 #define BODEGA_H
 
-#include<QtCore>
+#include<QString>
 
 class Bodega
 {
 public:
-    Bodega();
+    Bodega(void):  Direccion(""), Nombre(""), Descripcion(""), Telefono(0), Id(0) {}
+    ~Bodega(void) {}
 
     QString getDireccion(void);
     QString getNombre(void);
     QString getDescripcion(void);
     int getTelefono(void);
+    int getId(void);
 
     void setDireccion(QString direccion);
-    void setDescripcion(QString descripcion);
     void setNombre(QString nombre);
+    void setDescripcion(QString descripcion);
     void setTelefono(int telefono);
+    void setId(int id);
 
 protected:
     QString Direccion;
-    QString Descripcion;
     QString Nombre;
-    int telefono;
+    QString Descripcion;
+    int Telefono;
+    int Id;
 };
 
 inline QString Bodega::getDireccion()
@@ -46,6 +50,11 @@ inline int Bodega::getTelefono()
     return Telefono;
 }
 
+inline int Bodega::getId()
+{
+    return Id;
+}
+
 inline void Bodega::setDireccion(QString direccion)
 {
     Direccion = direccion;
@@ -64,6 +73,11 @@ inline void Bodega::setNombre(QString nombre)
 inline void Bodega::setTelefono(int telefono)
 {
     Telefono = telefono;
+}
+
+inline void Bodega::setId(int id)
+{
+    Id = id;
 }
 
 #endif // BODEGA_H

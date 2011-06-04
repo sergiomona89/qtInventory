@@ -4,13 +4,12 @@
 
 #include <QWidget>
 #include"ui_AdministracionUsuario.h"
-
 #include "DBQueries.h"
-
 
 class AdministracionUsuario : public QDialog, Ui::AdministracionUsuario
 {
     Q_OBJECT
+
 public:
     AdministracionUsuario(QWidget *parent = 0);
     ~AdministracionUsuario(void) {}

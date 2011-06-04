@@ -117,22 +117,23 @@ void DBQueries::eliminarUsuario(int id)
     delete db;
 }
 
-Bodega * DBQueries::bodega(int telefono)
+Bodega * DBQueries::bodega(int id)
 {
     DataBase * db = new DataBase;
 
     QSqlQuery query = db->dataBase()->exec();
 
-    if(query.exec("SELECT tbbodega.nombre, tbbodega.ubicacion, tbbodega.telefono, tbbodega.descripcion FROM tbbodega WHERE tbbodega.telefono="+QString::number(telefono)) && query.next())
+    if(query.exec("SELECT tbbodega.nombre, tbbodega.ubicacion, tbbodega.telefono, tbbodega.descripcion tbbodega.id FROM tbbodega WHERE tbbodega.id="+QString::number(id)) && query.next())
     {
         Bodega * bdg = new Bodega;
 
-        bdg->setNombre(query.value(0).toInt());
+        bdg->setNombre(query.value(0).toString());
         bdg->setDireccion(query.value(1).toString());
         bdg->setTelefono(query.value(2).toInt());
         bdg->setDescripcion(query.value(3).toString());
+        bdg->setId(query.value(4).toInt());
 
-        return u;
+        return bdg;
     }
 
     return 0;
@@ -144,38 +145,63 @@ bool DBQueries::guardarBodega(Bodega &bdg)
 
     QSqlQuery query = db->dataBase()->exec();
 
-    bool insert = query.exec("INSERT INTO tbbodega (nombre, ubicacion, descripcion, telefono) VALUES ('"+bdg.getNombre()+"', '"+bdg.getUbicacion()+"', '"+bdg.getDescripcion()+"', "+QString::number(bdg.getTelefono())+")");
+    bool insert = query.exec("INSERT INTO tbbodega (nombre, ubicacion, descripcion, telefono) VALUES ('"+bdg.getNombre()+"', '"+bdg.getDireccion()+"', '"+bdg.getDescripcion()+"', "+QString::number(bdg.getTelefono())+")");
 
     delete db;
 
     return insert;
 }
 
-void DBQueries::eliminarBodega(int telefono)
+void DBQueries::eliminarBodega(int id)
 {
     DataBase * db = new DataBase;
 
     QSqlQuery query = db->dataBase()->exec();
 
-    query.exec("DELETE FROM tbbodega WHERE tbbodega.telefono=" + QString::number(telefono));
+    query.exec("DELETE FROM tbbodega WHERE tbbodega.id=" + QString::number(id));
 
     delete db;
 }
 
-void DBQueries::actualizarBodega(QString nombre, QString direccion, int telefono, QString descripcion)
-{//arreglar esta parte.
-    Bodega * bdg = bodega(telefono);
+void DBQueries::actualizarBodega(int id, QString nombre, QString direccion, int telefono, QString descripcion)
+{
+    Bodega * bdg = bodega(id);
 
     bdg->setNombre(nombre);
     bdg->setDireccion(direccion);
     bdg->setDescripcion(descripcion);
-    if(contrasena != "")
+    bdg->setTelefono(telefono);
+
+    eliminarBodega(id);
+    guardarBodega(*bdg);
+
+    delete bdg;
+}
+
+BodegaList * DBQueries::bodegas(void)
+{
+    DataBase * db = new DataBase;
+
+    BodegaList * bl = new BodegaList;
+
+    QSqlQuery query = db->dataBase()->exec();
+
+    query.exec("SELECT tbbodega.nombre, tbbodega.ubicacion, tbbodega.telefono, tbbodega.descripcion tbbodega.id FROM tbbodega");
+
+    while(query.next())
     {
-        usr->setContrasena(contrasena);
+        Bodega bdg;
+
+        bdg.setNombre(query.value(0).toString());
+        bdg.setDireccion(query.value(1).toString());
+        bdg.setTelefono(query.value(2).toInt());
+        bdg.setDescripcion(query.value(3).toString());
+        bdg.setId(query.value(4).toInt());
+
+        bl->append(bdg);
     }
 
-    eliminarUsuario(id);
-    guardarUsuario(*usr);
+    delete db;
 
-    delete usr;
+    return bl;
 }

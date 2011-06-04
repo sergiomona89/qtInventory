@@ -2,7 +2,6 @@
 #include "Crear_usuario.h"
 #include <QMessageBox>
 
-
 Crear_usuario::Crear_usuario(QWidget *parent) :
     QDialog(parent)
 {
@@ -17,7 +16,8 @@ Crear_usuario::Crear_usuario(QWidget *parent) :
 
 void Crear_usuario::crear()
 {
-        if(contrasenaLineEdit->text() == cContrasenaLineEdit->text()){
+        if(contrasenaLineEdit->text() == cContrasenaLineEdit->text())
+        {
             Usuario u;
             u.setNombre( nombreLineEdit->text());
             u.setId(idLineEdit->text().toInt());
@@ -26,12 +26,22 @@ void Crear_usuario::crear()
             u.setEmail(emailLineEdit->text());
             u.setTelefono(telefonoLineEdit->text().toInt());
 
-        if(DBQueries::guardarUsuario(u))
-        {
-#warning "falta mensaje de error"
-        }
+            if(DBQueries::guardarUsuario(u))
+            {
+                QMessageBox * si = new QMessageBox(this);
+                si->setWindowTitle("Crear");
+                si->setText(QString("El usuario se ha creado exitosamente"));
+                si->show();
+            }
+            else
+            {
+                QMessageBox * error = new QMessageBox(this);
+                error->setWindowTitle("Crear");
+                error->setText(QString("No se pudo crear"));
+                error->show();
+            }
 
-        accept();
+            accept();
 
         }
         else

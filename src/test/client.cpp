@@ -7,7 +7,9 @@
 #include "DBQueries.h"
 #include "Info_usuario.h"
 #include "AdministracionUsuario.h"
+#include "Administracionbodega.h"
 #include "autenticarse.h"
+#include "Crear_bodega.h"
 
 int db_options(int &argc, char **argv);
 int gui(int &argc, char **argv);
@@ -55,7 +57,7 @@ int gui(int &argc, char **argv)
 {
     QApplication app(argc, argv);
 
-    AdministracionUsuario au;
+    AdministracionBodega au;
     au.show();
 
     return app.exec();

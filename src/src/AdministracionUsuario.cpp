@@ -1,5 +1,4 @@
 
-
 // Qt
 #include <QInputDialog>
 
