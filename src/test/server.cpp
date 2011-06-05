@@ -1,15 +1,14 @@
 
+#include<QApplication>
 #include"Servidor.h"
-#include<QUdpSocket>
 
 #define PUERTO	3490
 
 int main(int argc, char **argv)
 {
-    QUdpSocket * sk = new QUdpSocket;
-    sk->bind(PUERTO);
+    QApplication app(argc, argv);
 
-    delete sk;
+    Servidor sv;
 
-    return 0;
+    return app.exec();
 }

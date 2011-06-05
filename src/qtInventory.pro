@@ -7,8 +7,8 @@ OBJECTS_DIR = tmp/
 MOC_DIR = tmp/
 UI_DIR = tmp/
 
-HEADERS += include/Servidor.h \
-    include/DataBase.h \
+HEADERS += include/DataBase.h \
+    include/Servidor.h \
     include/Act_usuario.h \
     include/Producto.h \
     include/Usuario.h \
@@ -23,11 +23,11 @@ HEADERS += include/Servidor.h \
     include/Crear_usuario.h \
     include/types.h \
     include/Crear_bodega.h \
-    include/Act_bodega.h \
-    include/Administracionbodega.h
-
-SOURCES += src/Servidor.cpp \
-    src/DataBase.cpp \
+    include/Act_bodega.h \ 
+    include/Administracionbodega.h \
+    include/Cliente.h
+SOURCES += src/DataBase.cpp \
+    src/Servidor.cpp \
     src/Act_usuario.cpp \
     src/DBQueries.cpp \
     src/Administrar.cpp \
@@ -37,6 +37,7 @@ SOURCES += src/Servidor.cpp \
     src/Informacion_usuario_pendi.cpp \
     src/AdministracionUsuario.cpp \
     src/Crear_usuario.cpp \
+    src/Cliente.cpp \
     src/Crear_bodega.cpp \
     src/Act_bodega.cpp \
     src/Administracionbodega.cpp

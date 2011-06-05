@@ -1,0 +1,6 @@
+#!/bin/bash
+
+make clean
+rm -r Makefile
+qmake -config server
+make -j 4
