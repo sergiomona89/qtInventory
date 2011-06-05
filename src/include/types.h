@@ -2,7 +2,10 @@
 #ifndef TYPES_H
 #define TYPES_H
 
+#define HOST			"localhost"
 #define PUERTO			3490
+
+#define print(X)		qDebug() << X;
 
 #define SERIALIZAR(X)		reinterpret_cast<char *>(&X)
 #define DESERIALIZAR(X)		reinterpret_cast<char *>(&X)

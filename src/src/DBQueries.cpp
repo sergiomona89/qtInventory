@@ -8,19 +8,21 @@ int DBQueries::autenticar(int id, QString contrasena)
     DataBase * db = new DataBase;
 
     QSqlQuery query = db->dataBase()->exec();
-    if(query.exec("SELECT tbplugin.id FROM tbplugin WHERE tbplugin.id="+QString::number(id)+" AND tbplugin.contrasena='"+contrasena+"'"))
-        return 0;
-
+    QString q = "SELECT tbusuario.id FROM tbusuario WHERE tbusuario.id="+QString::number(id)+" AND tbusuario.contrasena='"+contrasena+"'";
+    int r;
+    if(query.exec(q))
+        r = 0;
     if(query.next())
     {
         delete db;
-        return 1;
+        r = 1;
     }
     else
     {
         delete db;
-        return 2;
+        r = 2;
     }
+    return r;
 }
 
 void DBQueries::actualizarUsuario(QString nombre, QString cargo, int id, QString contrasena)

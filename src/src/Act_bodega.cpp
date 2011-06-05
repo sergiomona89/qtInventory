@@ -20,6 +20,6 @@ Act_bodega::Act_bodega(QString nombre, QString direccion, QString descripcion, i
 
 void Act_bodega::actualizar(void)
 {
-       DBQueries::actualizarBodega(idLabel->text().toInt(), nombreLineEdit->text(), ubicacionLineEdit->text(), telefonoLineEdit->text().toInt(), descripcionTextEdit->toPlainText());
-       accept();
+    DBQueries::actualizarBodega(idLabel->text().toInt(), nombreLineEdit->text(), ubicacionLineEdit->text(), telefonoLineEdit->text().toInt(), descripcionTextEdit->toPlainText());
+    accept();
 }

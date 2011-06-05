@@ -19,6 +19,7 @@ protected:
 
 protected slots:
     void autenticar(void);
+    void startRead(void);
 };
 
 #endif // AUTENTICARSE_H

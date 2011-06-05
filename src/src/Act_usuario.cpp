@@ -44,9 +44,9 @@ void Act_usuario::actualizar(void)
 {
     if(ModificarCheckBox->checkState() == Qt::Checked)
     {
-       Usuario * u = DBQueries::usuario(IdLineEdit->text().toInt());
-       if(u->getContrasena() == ContrasenaLineEdit->text())
-       {
+        Usuario * u = DBQueries::usuario(IdLineEdit->text().toInt());
+        if(u->getContrasena() == ContrasenaLineEdit->text())
+        {
             if(NuevaContrasenaLineEdit->text() == ConfirmarContrasenaLineEdit->text())
             {
                 DBQueries::actualizarUsuario(NombreLineEdit->text(), CargoLineEdit->text(), IdLineEdit->text().toInt(), NuevaContrasenaLineEdit->text());
@@ -59,14 +59,14 @@ void Act_usuario::actualizar(void)
                 error->setText(QString("Verificacion de contraseñas invalida"));
                 error->show();
             }
-       }
-       else
-       {
-           QMessageBox * error = new QMessageBox(this);
-           error->setWindowTitle("Error");
-           error->setText(QString("La contraseña es invalida"));
-           error->show();
-       }
+        }
+        else
+        {
+            QMessageBox * error = new QMessageBox(this);
+            error->setWindowTitle("Error");
+            error->setText(QString("La contraseña es invalida"));
+            error->show();
+        }
     }
     else
     {
