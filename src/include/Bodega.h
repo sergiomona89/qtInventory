@@ -28,6 +28,8 @@ protected:
     QString Descripcion;
     int Telefono;
     int Id;
+
+    friend class DataStream;
 };
 
 inline QString Bodega::getDireccion()

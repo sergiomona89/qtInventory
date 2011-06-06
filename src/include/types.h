@@ -16,6 +16,8 @@ enum Peticion {
     Autenticar,		// autentica un usuario en la base de datos
     DatosUsuario,	// muestra la información de un usuario
     DatosUsuarios,	// lista los usuarios en la base de datos
+    DatosBodega,	// muestra la información de una bodega
+    DatosBodegas,	// lista las bodegas en la base de datos
     NuevoUsuario
 };
 

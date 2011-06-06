@@ -1,13 +1,16 @@
 
 // Qt
+#include <QMessageBox>
 #include <QInputDialog>
 
 #include "Act_bodega.h"
 #include "Administracionbodega.h"
 #include "Crear_bodega.h"
+#include "Cliente.h"
+#include "DataStream.h"
 
 AdministracionBodega::AdministracionBodega(QWidget *parent) :
-    QDialog(parent)
+    QWidget(parent)
 {
     setupUi(this);
     connect(NuevoPushButton, SIGNAL(clicked(void)), this, SLOT(nuevaBodega(void)));
@@ -18,10 +21,14 @@ AdministracionBodega::AdministracionBodega(QWidget *parent) :
     lst << "Bodega numero" << "Nombre" << "Ubicacion" << "Teléfono" << "Descripcion" ;
 
     BodegasTreeWidget->setHeaderLabels(lst);
+    
+    _cliente = new Cliente(this);
+    _cliente->start("127.0.0.1", PUERTO);
+    connect(_cliente->client(), SIGNAL(connected(void)), this, SLOT(descargarBodegas()));
 
-    BodegaList * bl = DBQueries::bodegas();
-    setBodegas(bl);
-    delete bl;
+//     BodegaList * bl = DBQueries::bodegas();
+//     setBodegas(bl);
+//     delete bl;
 }
 
 void AdministracionBodega::setBodegas(BodegaList * lst)
@@ -36,6 +43,22 @@ void AdministracionBodega::setBodegas(BodegaList * lst)
         item->setText(2, bdg->getDireccion());
         item->setText(3, QString::number(bdg->getTelefono()));
         item->setText(4, bdg->getDescripcion());
+    }
+}
+
+void AdministracionBodega::descargarBodegas()
+{
+    int p = DatosBodegas;
+    if(_cliente->estado() == conectado)
+    {
+        QByteArray block;
+        QDataStream out(&block, QIODevice::WriteOnly);
+        out.setVersion(QDataStream::Qt_4_7);
+        out << p;
+        out.device()->seek(0);
+        _cliente->client()->write(block);
+        _cliente->client()->flush();
+        connect(_cliente->client(), SIGNAL(readyRead()), this, SLOT(startRead()));
     }
 }
 
@@ -82,4 +105,30 @@ void AdministracionBodega::eliminarBodega()
         setBodegas(bl);
         delete bl;
     }
+}
+
+void AdministracionBodega::startRead()
+{ 
+    DataStream in(_cliente->client());
+    in.setVersion(QDataStream::Qt_4_7);
+    int len = 0;
+    in >> len;
+
+    if(len == 0)
+    {
+        QMessageBox::critical(this, "Administracion Bodega", "No se ha podido abrir la base de datos");
+    }
+    else
+    {
+        BodegaList * bl = new BodegaList;
+        for(int i = 0; i < len; i++)
+        {
+            Bodega bdg;
+            in >> bdg;
+            bl->append(bdg);
+        }
+        setBodegas(bl);
+    }
+
+    disconnect(this);
 }
