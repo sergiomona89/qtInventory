@@ -1,10 +1,10 @@
 #ifndef ADMINISTRAR_H
 #define ADMINISTRAR_H
 
-#include <QWidget>
+#include <QMainWindow>
 #include"ui_administrar.h"
 
-class Administrar : public QDialog, Ui::Administrar
+class Administrar : public QMainWindow, Ui::Administrar
 {
     Q_OBJECT
 public:

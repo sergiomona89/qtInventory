@@ -1,13 +1,16 @@
 
 // Qt
+#include <QMessageBox>
 #include <QInputDialog>
 
 #include "Act_usuario.h"
 #include "AdministracionUsuario.h"
 #include "Crear_usuario.h"
+#include "Cliente.h"
+#include "DataStream.h"
 
 AdministracionUsuario::AdministracionUsuario(QWidget *parent) :
-    QDialog(parent)
+    QWidget(parent)
 {
     setupUi(this);
     connect(NuevoPushButton, SIGNAL(clicked(void)), this, SLOT(nuevoUsuario(void)));
@@ -19,9 +22,13 @@ AdministracionUsuario::AdministracionUsuario(QWidget *parent) :
 
     UsuariosTreeWidget->setHeaderLabels(lst);
 
-    UsuarioList * ul = DBQueries::usuarios();
-    setUsuarios(ul);
-    delete ul;
+    _cliente = new Cliente(this);
+    _cliente->start("127.0.0.1", PUERTO);
+    connect(_cliente->client(), SIGNAL(connected(void)), this, SLOT(descargarUsuarios()));
+
+//     UsuarioList * ul = DBQueries::usuarios();
+//     setUsuarios(ul);
+//     delete ul;
 }
 
 void AdministracionUsuario::setUsuarios(UsuarioList * lst)
@@ -36,6 +43,22 @@ void AdministracionUsuario::setUsuarios(UsuarioList * lst)
         item->setText(2, usr->getCargo());
         item->setText(3, usr->getEmail());
         item->setText(4, QString::number(usr->getTelefono()));
+    }
+}
+
+void AdministracionUsuario::descargarUsuarios()
+{
+    int p = DatosUsuarios;
+    if(_cliente->estado() == conectado)
+    {
+        QByteArray block;
+        QDataStream out(&block, QIODevice::WriteOnly);
+        out.setVersion(QDataStream::Qt_4_7);
+        out << p;
+        out.device()->seek(0);
+        _cliente->client()->write(block);
+        _cliente->client()->flush();
+        connect(_cliente->client(), SIGNAL(readyRead()), this, SLOT(startRead()));
     }
 }
 
@@ -82,4 +105,30 @@ void AdministracionUsuario::eliminarUsuario()
         setUsuarios(ul);
         delete ul;
     }
+}
+
+void AdministracionUsuario::startRead()
+{ 
+    DataStream in(_cliente->client());
+    in.setVersion(QDataStream::Qt_4_7);
+    int len = 0;
+    in >> len;
+
+    if(len == 0)
+    {
+        QMessageBox::critical(this, "Administracion Usuario", "No se ha podido abrir la base de datos");
+    }
+    else
+    {
+        UsuarioList * ul = new UsuarioList;
+        for(int i = 0; i < len; i++)
+        {
+            Usuario usr;
+            in >> usr;
+            ul->append(usr);
+        }
+        setUsuarios(ul);
+    }
+
+    disconnect(this);
 }

@@ -1,7 +1,8 @@
+
 #include "Administrar.h"
 
 Administrar::Administrar(QWidget *parent) :
-    QDialog(parent)
+    QMainWindow(parent)
 {
     setupUi(this);
 }

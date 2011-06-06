@@ -19,8 +19,6 @@ Autenticarse::Autenticarse(QWidget *parent) :
 
     _cliente = new Cliente(this);
     _cliente->start("127.0.0.1", PUERTO);
-
-    autenticar();
 }
 
 Autenticarse::~Autenticarse(void)
@@ -33,9 +31,6 @@ void Autenticarse::autenticar()
     int p = Autenticar;
     QString id = IdUsuarioLineEdit->text();
     QString pass = ContrasenaLineEdit->text();
-//     debug();
-//     print(id);
-//     print(pass);
     // envío el tipo de peticion
     if(_cliente->estado() == conectado)
     {
@@ -59,7 +54,6 @@ void Autenticarse::startRead()
     int r;
     in >> r;
 
-    print(r);
     if(r == 0)
     {
         QMessageBox::critical(this, "Error", "No se ha podido abrir la base de datos");

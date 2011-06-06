@@ -2,7 +2,7 @@
 #include"DBQueries.h"
 #include"types.h"
 #include"Servidor.h"
-
+#include"DataStream.h"
 
 Servidor::Servidor(QObject* parent): QObject(parent)
 {
@@ -32,6 +32,8 @@ void Servidor::startRead()
     in.setVersion(QDataStream::Qt_4_7);
     int p;
     in >> p;
+    
+    print(p);
 
     if(p == Autenticar)
     {
@@ -39,16 +41,31 @@ void Servidor::startRead()
         QString pass;
         in >> id;
         in >> pass;
-// 	print(id);
-// 	print(pass);
         int r = DBQueries::autenticar(id.toInt(), pass);
-// 	enviar(r);
 
         QByteArray block;
         QDataStream out(&block, QIODevice::WriteOnly);
         out.setVersion(QDataStream::Qt_4_7);
         out << r;
-// 	out.device()->seek(0);
+	out.device()->seek(0);
+        _client->write(block);
+        _client->flush();
+    }
+    else if(p == DatosUsuarios)
+    {
+        QByteArray block;
+        DataStream out(&block, QIODevice::WriteOnly);
+        out.setVersion(QDataStream::Qt_4_7);
+
+        UsuarioList * ul = DBQueries::usuarios();
+
+        out << ul->length();
+
+        for(UsuarioListIterator it = ul->begin(); it != ul->end(); it++)
+        {
+            out << (*it);
+        }
+        delete ul;
         _client->write(block);
         _client->flush();
     }

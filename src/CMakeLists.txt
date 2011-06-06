@@ -25,6 +25,7 @@ include/Crear_bodega.h
 include/Crear_producto.h
 include/Crear_usuario.h
 include/DataBase.h
+include/DataStream.h
 include/DBQueries.h
 include/Informacion_usuario_pendi.h
 include/Info_usuario.h
@@ -53,6 +54,7 @@ src/Informacion_usuario_pendi.cpp
 src/Info_usuario.cpp
 src/Interfaz.cpp
 src/Servidor.cpp
+src/DataStream.cpp
 )
 
 SET( QT_INVENTORY_UIS

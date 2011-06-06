@@ -4,6 +4,8 @@
 
 #include<QString>
 
+class DataStream;
+
 class Usuario
 {
 public:
@@ -31,6 +33,8 @@ protected:
     int Id;
     QString Nombre;
     int Telefono;
+
+    friend class DataStream;
 };
 
 inline QString Usuario::getCargo()

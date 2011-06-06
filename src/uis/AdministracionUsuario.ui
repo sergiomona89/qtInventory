@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
  <class>AdministracionUsuario</class>
- <widget class="QDialog" name="AdministracionUsuario">
+ <widget class="QWidget" name="AdministracionUsuario">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>566</width>
-    <height>336</height>
+    <width>641</width>
+    <height>479</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Administracion de usuario</string>
+   <string>Form</string>
   </property>
   <layout class="QGridLayout" name="gridLayout">
    <item row="0" column="0" rowspan="4">
@@ -81,7 +81,7 @@
      <property name="sizeHint" stdset="0">
       <size>
        <width>20</width>
-       <height>154</height>
+       <height>378</height>
       </size>
      </property>
     </spacer>
