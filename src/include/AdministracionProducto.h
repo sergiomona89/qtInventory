@@ -1,0 +1,10 @@
+
+
+#ifndef ADMINISTRACIONPRODUCTO_H
+#define ADMINISTRACIONPRODUCTO_H
+
+class AdministracionProducto
+{
+};
+
+#endif // ADMINISTRACIONPRODUCTO_H

@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Act_producto</class>
+ <widget class="QWidget" name="Act_producto">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>300</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Actualizar producto</string>
+  </property>
+  <widget class="QLabel" name="precioVentaLabel">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>190</y>
+     <width>111</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Precio al Publico</string>
+   </property>
+  </widget>
+  <widget class="QTextEdit" name="descripcionTextEdit">
+   <property name="geometry">
+    <rect>
+     <x>180</x>
+     <y>80</y>
+     <width>151</width>
+     <height>41</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="referenciaLabel">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>50</y>
+     <width>71</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Referencia</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="referenciaLineEdit">
+   <property name="geometry">
+    <rect>
+     <x>180</x>
+     <y>50</y>
+     <width>151</width>
+     <height>20</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="aceptarPushButton">
+   <property name="geometry">
+    <rect>
+     <x>90</x>
+     <y>250</y>
+     <width>75</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Aceptar</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="bodegaLabel">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>130</y>
+     <width>51</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Bodega</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="cancelarPushButton">
+   <property name="geometry">
+    <rect>
+     <x>190</x>
+     <y>250</y>
+     <width>75</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Cancelar</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="descripcionLabel">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>80</y>
+     <width>81</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Descripcion</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="precioVentaLineEdit">
+   <property name="geometry">
+    <rect>
+     <x>180</x>
+     <y>190</y>
+     <width>151</width>
+     <height>20</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="bodegaComboBox">
+   <property name="geometry">
+    <rect>
+     <x>180</x>
+     <y>130</y>
+     <width>151</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="precioCompraLabel">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>160</y>
+     <width>121</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Precio de Compra</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="precioCompraLineEdit">
+   <property name="geometry">
+    <rect>
+     <x>180</x>
+     <y>160</y>
+     <width>151</width>
+     <height>20</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>108</x>
+     <y>10</y>
+     <width>181</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Numero unico de producto</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="idLabel">
+   <property name="geometry">
+    <rect>
+     <x>290</x>
+     <y>10</y>
+     <width>59</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

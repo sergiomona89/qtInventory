@@ -14,6 +14,7 @@ ADD_DEFINITIONS( -Wall -Iinclude -I/usr/include/xlib -g -DQGLVIEWER_SHARED )
 SET( QT_INVENTORY_HDRS
 include/Act_bodega.h
 include/Act_usuario.h
+include/Act_producto.h
 include/Administracionbodega.h
 include/AdministracionUsuario.h
 include/Administrar.h
@@ -37,6 +38,7 @@ include/Usuario.h
 SET( QT_INVENTORY_SRCS
 src/Act_bodega.cpp
 src/Act_usuario.cpp
+src/Act_producto.cpp
 src/Administracionbodega.cpp
 src/AdministracionUsuario.cpp
 src/Administrar.cpp
@@ -58,6 +60,7 @@ uis/Act_bodega.ui
 uis/actualizacion_bodega.ui
 uis/actualizacion_producto.ui
 uis/Act_usuario.ui
+uis/Act_producto.ui
 uis/Administracionbodega.ui
 uis/AdministracionUsuario.ui
 uis/administrar.ui
