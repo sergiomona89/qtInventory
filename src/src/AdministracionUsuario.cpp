@@ -25,10 +25,6 @@ AdministracionUsuario::AdministracionUsuario(QWidget *parent) :
     _cliente = new Cliente(this);
     _cliente->start("127.0.0.1", PUERTO);
     connect(_cliente->client(), SIGNAL(connected(void)), this, SLOT(descargarUsuarios()));
-
-//     UsuarioList * ul = DBQueries::usuarios();
-//     setUsuarios(ul);
-//     delete ul;
 }
 
 void AdministracionUsuario::setUsuarios(UsuarioList * lst)
@@ -67,9 +63,14 @@ void AdministracionUsuario::nuevoUsuario()
     Crear_usuario cu(this);
     if(cu.exec() == QDialog::Accepted)
     {
-        UsuarioList * ul = DBQueries::usuarios();
-        setUsuarios(ul);
-        delete ul;
+        delete _cliente;
+        _cliente = new Cliente(this);
+        _cliente->start("127.0.0.1", PUERTO);
+        connect(_cliente->client(), SIGNAL(connected(void)), this, SLOT(descargarUsuarios()));
+//       descargarUsuarios();
+//         UsuarioList * ul = DBQueries::usuarios();
+//         setUsuarios(ul);
+//         delete ul;
     }
 }
 
@@ -108,7 +109,7 @@ void AdministracionUsuario::eliminarUsuario()
 }
 
 void AdministracionUsuario::startRead()
-{ 
+{
     DataStream in(_cliente->client());
     in.setVersion(QDataStream::Qt_4_7);
     int len = 0;

@@ -28,12 +28,10 @@ void Servidor::acceptConnection()
 
 void Servidor::startRead()
 {
-    QDataStream in(_client);
+    DataStream in(_client);
     in.setVersion(QDataStream::Qt_4_7);
     int p;
     in >> p;
-    
-    print(p);
 
     if(p == Autenticar)
     {
@@ -47,7 +45,7 @@ void Servidor::startRead()
         QDataStream out(&block, QIODevice::WriteOnly);
         out.setVersion(QDataStream::Qt_4_7);
         out << r;
-	out.device()->seek(0);
+        out.device()->seek(0);
         _client->write(block);
         _client->flush();
     }
@@ -69,8 +67,28 @@ void Servidor::startRead()
         _client->write(block);
         _client->flush();
     }
+    else if(p == NuevoUsuario)
+    {
+        print("nuevo usuario");
+        QByteArray block;
+        DataStream out(&block, QIODevice::WriteOnly);
+        out.setVersion(QDataStream::Qt_4_7);
+
+        Usuario usr;
+        in >> usr;
+
+        bool r = DBQueries::guardarUsuario(usr);
+
+        print(r);
+
+        out << r;
+
+        _client->write(block);
+        _client->flush();
+    }
     else
     {
+        print("ni mierda: " << p);
         Respuesta r = error;
         enviar(r);
     }
