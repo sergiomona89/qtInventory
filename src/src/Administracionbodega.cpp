@@ -28,7 +28,7 @@ void AdministracionBodega::setBodegas(BodegaList * lst)
 {
     BodegasTreeWidget->clear();
     for(BodegaListIterator it = lst->begin(); it != lst->end(); it++)
-    {
+     {
         Bodega * bdg = &(*it);
         QTreeWidgetItem * item = new QTreeWidgetItem(BodegasTreeWidget);
         item->setText(0, QString::number(bdg->getId()));

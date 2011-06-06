@@ -1,22 +1,22 @@
+
 #ifndef CREAR_PRODUCTO_H
 #define CREAR_PRODUCTO_H
 
-#include <QWidget>
+#include <QDialog>
+#include "Producto.h"
+#include "ui_Crear_producto.h"
+#include "DBQueries.h"
 
-namespace Ui {
-class Crear_producto;
-}
-
-class Crear_producto : public QWidget
+class Crear_producto : public QDialog, Ui::Crear_producto
 {
     Q_OBJECT
 
 public:
-    explicit Crear_producto(QWidget *parent = 0);
-    ~Crear_producto();
+    int indBodega[];
+    Crear_producto(QWidget *parent = 0);
 
-private:
-    Ui::Crear_producto *ui;
+public slots:
+    void crear(void);
 };
 
 #endif // CREAR_PRODUCTO_H
