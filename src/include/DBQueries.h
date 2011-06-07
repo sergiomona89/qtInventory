@@ -25,7 +25,7 @@ public:
     static Usuario * usuario(int id);
     static UsuarioList * usuarios(void);
     static bool guardarUsuario(Usuario &usr);
-    static void eliminarUsuario(int id);
+    static bool eliminarUsuario(int id);
     static Bodega * bodega(int id);
     static bool guardarBodega(Bodega &bdg);
     static void actualizarBodega(int id, QString nombre, QString direccion, int telefono, QString descripcion);

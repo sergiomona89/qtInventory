@@ -2,6 +2,8 @@
 #include "Act_usuario.h"
 #include "DBQueries.h"
 #include <QMessageBox>
+#include "types.h"
+#include "Cliente.h"
 
 Act_usuario::Act_usuario(QString nombre, QString cargo, int id, QWidget *parent) :
     QDialog(parent)
@@ -22,6 +24,21 @@ Act_usuario::Act_usuario(QString nombre, QString cargo, int id, QWidget *parent)
     connect(AceptarPushButton, SIGNAL(clicked(void)), this, SLOT(actualizar(void)));
     connect(CancelarPushButton, SIGNAL(clicked(void)), this, SLOT(reject(void)));
     connect(ModificarCheckBox, SIGNAL(stateChanged(int)), this, SLOT(esChecked(void)));
+
+    _cliente = new Cliente(this);
+    _cliente->start("127.0.0.1", PUERTO);
+
+    QByteArray block;
+    DataStream out(&block, QIODevice::WriteOnly);
+    out.setVersion(QDataStream::Qt_4_7);
+
+    int p = DatosUsuario;
+    out << p;
+
+    out.device()->seek(0);
+    _cliente->client()->write(block);
+    _cliente->client()->flush();
+    connect(_cliente->client(), SIGNAL(readyRead()), this, SLOT(actualizar()));
 }
 
 void Act_usuario::esChecked()
@@ -40,7 +57,7 @@ void Act_usuario::esChecked()
     }
 }
 
-void Act_usuario::actualizar(void)
+void Act_usuario::actualizar()
 {
     if(ModificarCheckBox->checkState() == Qt::Checked)
     {

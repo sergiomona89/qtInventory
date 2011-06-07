@@ -21,7 +21,7 @@ public slots:
     void nuevaBodega(void);
     void actualizarBodega(void);
     void eliminarBodega(void);
-    
+
 protected:
     Cliente * _cliente;
 

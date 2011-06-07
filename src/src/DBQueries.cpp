@@ -108,15 +108,17 @@ bool DBQueries::guardarUsuario(Usuario &usr)
     return insert;
 }
 
-void DBQueries::eliminarUsuario(int id)
+bool DBQueries::eliminarUsuario(int id)
 {
     DataBase * db = new DataBase;
 
     QSqlQuery query = db->dataBase()->exec();
 
-    query.exec("DELETE FROM tbusuario WHERE tbusuario.id=" + QString::number(id));
+    bool r = query.exec("DELETE FROM tbusuario WHERE tbusuario.id=" + QString::number(id));
 
     delete db;
+
+    return r;
 }
 
 Bodega * DBQueries::bodega(int id)

@@ -18,7 +18,9 @@ enum Peticion {
     DatosUsuarios,	// lista los usuarios en la base de datos
     DatosBodega,	// muestra la información de una bodega
     DatosBodegas,	// lista las bodegas en la base de datos
-    NuevoUsuario
+    ActualizarUsuario,
+    NuevoUsuario,
+    EliminarUsuario,
 };
 
 enum Respuesta { done, error };

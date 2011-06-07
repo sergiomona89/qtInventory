@@ -24,10 +24,12 @@ public slots:
     void eliminarUsuario(void);
 
 protected:
+    int id;
     Cliente * _cliente;
 
 protected slots:
     void descargarUsuarios(void);
+    void eliminarDesdeSocket(void);
     void startRead(void);
 };
 

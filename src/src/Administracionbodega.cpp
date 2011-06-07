@@ -21,7 +21,7 @@ AdministracionBodega::AdministracionBodega(QWidget *parent) :
     lst << "Bodega numero" << "Nombre" << "Ubicacion" << "Teléfono" << "Descripcion" ;
 
     BodegasTreeWidget->setHeaderLabels(lst);
-    
+
     _cliente = new Cliente(this);
     _cliente->start("127.0.0.1", PUERTO);
     connect(_cliente->client(), SIGNAL(connected(void)), this, SLOT(descargarBodegas()));
@@ -108,7 +108,7 @@ void AdministracionBodega::eliminarBodega()
 }
 
 void AdministracionBodega::startRead()
-{ 
+{
     DataStream in(_cliente->client());
     in.setVersion(QDataStream::Qt_4_7);
     int len = 0;

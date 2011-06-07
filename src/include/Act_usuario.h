@@ -5,12 +5,17 @@
 #include <QDialog>
 #include "ui_Act_usuario.h"
 
+class Cliente;
+
 class Act_usuario : public QDialog, Ui::Act_usuario
 {
     Q_OBJECT
 
 public:
     Act_usuario(QString nombre, QString cargo, int id, QWidget *parent = 0);
+
+protected:
+    Cliente * _cliente;
 
 protected slots:
     void actualizar(void);

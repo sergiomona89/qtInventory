@@ -58,6 +58,25 @@ void AdministracionUsuario::descargarUsuarios()
     }
 }
 
+void AdministracionUsuario::eliminarDesdeSocket()
+{
+    QInputDialog id(this);
+    id.setLabelText("Ingrese el id del usuario a eliminar");
+    if(id.exec() == QDialog::Accepted)
+    {
+        int p = EliminarUsuario;
+        QByteArray block;
+        QDataStream out(&block, QIODevice::WriteOnly);
+        out.setVersion(QDataStream::Qt_4_7);
+        out << p;
+        out << id.textValue().toInt();
+        out.device()->seek(0);
+        _cliente->client()->write(block);
+        _cliente->client()->flush();
+        connect(_cliente->client(), SIGNAL(readyRead()), this, SLOT(startRead()));
+    }
+}
+
 void AdministracionUsuario::nuevoUsuario()
 {
     Crear_usuario cu(this);
@@ -96,16 +115,10 @@ void AdministracionUsuario::actualizarUsuario()
 
 void AdministracionUsuario::eliminarUsuario()
 {
-    QInputDialog id(this);
-    id.setLabelText("Ingrese el id del usuario a eliminar");
-    if(id.exec() == QDialog::Accepted)
-    {
-        DBQueries::eliminarUsuario(id.textValue().toInt());
-
-        UsuarioList * ul = DBQueries::usuarios();
-        setUsuarios(ul);
-        delete ul;
-    }
+    delete _cliente;
+    _cliente = new Cliente(this);
+    _cliente->start("127.0.0.1", PUERTO);
+    connect(_cliente->client(), SIGNAL(connected(void)), this, SLOT(eliminarDesdeSocket(void)));
 }
 
 void AdministracionUsuario::startRead()

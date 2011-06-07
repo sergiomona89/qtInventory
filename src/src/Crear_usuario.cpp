@@ -45,20 +45,6 @@ void Crear_usuario::crear()
         _cliente->client()->write(block);
         _cliente->client()->flush();
 
-//         if(DBQueries::guardarUsuario(u))
-//         {
-//             QMessageBox * si = new QMessageBox(this);
-//             si->setWindowTitle("Crear");
-//             si->setText(QString("El usuario se ha creado exitosamente"));
-//             si->show();
-//         }
-//         else
-//         {
-//             QMessageBox * error = new QMessageBox(this);
-//             error->setWindowTitle("Crear");
-//             error->setText(QString("No se pudo crear"));
-//             error->show();
-//         }
         accept();
     }
     else

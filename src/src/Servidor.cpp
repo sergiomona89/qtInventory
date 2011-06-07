@@ -69,7 +69,6 @@ void Servidor::startRead()
     }
     else if(p == NuevoUsuario)
     {
-        print("nuevo usuario");
         QByteArray block;
         DataStream out(&block, QIODevice::WriteOnly);
         out.setVersion(QDataStream::Qt_4_7);
@@ -79,12 +78,37 @@ void Servidor::startRead()
 
         bool r = DBQueries::guardarUsuario(usr);
 
-        print(r);
-
         out << r;
 
         _client->write(block);
         _client->flush();
+    }
+    else if(p == EliminarUsuario)
+    {
+        int id;
+        in >> id;
+        bool r;
+        r = DBQueries::eliminarUsuario(id);
+
+        QByteArray block;
+        DataStream out(&block, QIODevice::WriteOnly);
+        out.setVersion(QDataStream::Qt_4_7);
+
+        UsuarioList * ul = DBQueries::usuarios();
+
+        out << ul->length();
+
+        for(UsuarioListIterator it = ul->begin(); it != ul->end(); it++)
+        {
+            out << (*it);
+        }
+        delete ul;
+        _client->write(block);
+        _client->flush();
+    }
+    else if(p == ActualizarUsuario)
+    {
+
     }
     else
     {
