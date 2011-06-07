@@ -16,6 +16,7 @@ include/Act_bodega.h
 include/Act_usuario.h
 include/Act_producto.h
 include/Administracionbodega.h
+include/AdministracionProducto.h
 include/AdministracionUsuario.h
 include/Administrar.h
 include/autenticarse.h
@@ -40,6 +41,7 @@ src/Act_bodega.cpp
 src/Act_usuario.cpp
 src/Act_producto.cpp
 src/Administracionbodega.cpp
+src/AdministracionProducto.cpp
 src/AdministracionUsuario.cpp
 src/Administrar.cpp
 src/autenticarse.cpp
@@ -62,6 +64,7 @@ uis/actualizacion_producto.ui
 uis/Act_usuario.ui
 uis/Act_producto.ui
 uis/Administracionbodega.ui
+uis/AdministracionProducto.ui
 uis/AdministracionUsuario.ui
 uis/administrar.ui
 uis/autenticacion.ui

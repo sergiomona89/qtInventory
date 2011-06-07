@@ -3,7 +3,7 @@
 #define ADMINISTRACIONUSUARIO_H
 
 #include <QWidget>
-#include"ui_AdministracionUsuario.h"
+#include "ui_AdministracionUsuario.h"
 #include "DBQueries.h"
 
 class AdministracionUsuario : public QDialog, Ui::AdministracionUsuario

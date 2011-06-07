@@ -124,15 +124,16 @@ Bodega * DBQueries::bodega(int id)
 
     QSqlQuery query = db->dataBase()->exec();
 
-    if(query.exec("SELECT tbbodega.nombre, tbbodega.ubicacion, tbbodega.telefono, tbbodega.descripcion tbbodega.id FROM tbbodega WHERE tbbodega.id="+QString::number(id)) && query.next())
+    if(query.exec("SELECT * FROM tbbodega WHERE tbbodega.id="+QString::number(id)) && query.next())
     {
         Bodega * bdg = new Bodega;
 
-        bdg->setNombre(query.value(0).toString());
-        bdg->setDireccion(query.value(1).toString());
-        bdg->setTelefono(query.value(2).toInt());
-        bdg->setDescripcion(query.value(3).toString());
-        bdg->setId(query.value(4).toInt());
+	bdg->setId(query.value(0).toInt());
+        bdg->setNombre(query.value(1).toString());
+        bdg->setDireccion(query.value(2).toString());
+	bdg->setDescripcion(query.value(3).toString());
+        bdg->setTelefono(query.value(4).toInt());
+        
 
         return bdg;
     }
@@ -173,8 +174,16 @@ void DBQueries::actualizarBodega(int id, QString nombre, QString direccion, int 
     bdg->setDescripcion(descripcion);
     bdg->setTelefono(telefono);
 
-    eliminarBodega(id);
-    guardarBodega(*bdg);
+    DataBase * db = new DataBase;
+
+    QSqlQuery query = db->dataBase()->exec();
+
+    query.exec("UPDATE tbbodega SET nombre ='"+bdg->getNombre()+"', ubicacion='"+bdg->getDireccion()+"', descripcion='"+bdg->getDescripcion()+"', telefono="+QString::number(bdg->getTelefono())+" WHERE id=" + QString::number(id));
+
+    delete db;
+    //eliminarBodega(id);
+    
+    //guardarBodega(*bdg);
 
     delete bdg;
 }
@@ -253,8 +262,16 @@ void DBQueries::actualizarProducto(int id, QString nombre, QString descripcion, 
     pdt->setPrecioCompra(preciocompra);
     pdt->setPrecioVenta(precioventa);
 
-    eliminarProducto(id);
-    guardarProducto(*pdt);
+//     eliminarProducto(id);
+//     guardarProducto(*pdt);
+
+    DataBase * db = new DataBase;
+
+    QSqlQuery query = db->dataBase()->exec();
+
+    query.exec("UPDATE tbproducto SET nombre ='"+pdt->getNombre()+"', descripcion='"+pdt->getDescripcion()+"', bodega='"+pdt->getBodega()+"', preciocompra='"+pdt->getPrecioCompra()+"', precioventa='"+pdt->getPrecioVenta()+"' WHERE id=" + QString::number(id));
+
+    delete db;
 
     delete pdt;
 }

@@ -1,7 +1,7 @@
 
 #include "Act_producto.h"
 #include "DBQueries.h"
-#include <QMessageBox>
+#include "types.h"
 
 Act_producto::Act_producto(int id, QString nombre, QString descripcion, QString bodega, QString precioCompra, QString precioVenta, QWidget *parent) :
     QDialog(parent)
@@ -24,10 +24,10 @@ Act_producto::Act_producto(int id, QString nombre, QString descripcion, QString 
     bodegaComboBox->itemText(bodega.toInt());
     precioCompraLineEdit->setText(precioCompra);
     precioVentaLineEdit->setText(precioVenta);
-    
 
     connect(aceptarPushButton, SIGNAL(clicked(void)), this, SLOT(actualizar(void)));
     connect(cancelarPushButton, SIGNAL(clicked(void)), this, SLOT(reject(void)));
+    print("llega aqui2");
 }
 
 void Act_producto::actualizar(void)

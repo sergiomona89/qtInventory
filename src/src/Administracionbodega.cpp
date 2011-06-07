@@ -5,6 +5,7 @@
 #include "Act_bodega.h"
 #include "Administracionbodega.h"
 #include "Crear_bodega.h"
+#include "types.h"
 
 AdministracionBodega::AdministracionBodega(QWidget *parent) :
     QDialog(parent)
@@ -48,6 +49,7 @@ void AdministracionBodega::nuevaBodega()
         setBodegas(bl);
         delete bl;
     }
+    print("paso");//aqui hay violacion de segmento.
 }
 
 void AdministracionBodega::actualizarBodega()
