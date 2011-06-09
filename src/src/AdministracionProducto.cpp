@@ -39,13 +39,11 @@ void AdministracionProducto::setProductos(ProductoList * lst)
         item->setText(0, QString::number(pdt->getId()));
 	item->setText(1, pdt->getNombre());
 	item->setText(2, pdt->getDescripcion());
-	print(pdt->getBodega().toInt());
 	Bodega * bdg = DBQueries::bodega(pdt->getBodega().toInt());
  	item->setText(3, bdg->getNombre());
  	item->setText(4, pdt->getPrecioCompra());
  	item->setText(5,pdt->getPrecioVenta());
     }
-    print("paso");
 }
 
 void AdministracionProducto::nuevoProducto()
@@ -73,8 +71,6 @@ void AdministracionProducto::actualizarProducto()
             return;
 	
         Act_producto ap(pdt->getId(),pdt->getNombre(), pdt->getDescripcion(),pdt->getBodega(),pdt->getPrecioCompra(), pdt->getPrecioVenta(), this);
-	print("llega aqui3");
-	print(ap.exec());//aqui hay fallo de segmentacion.
         if(ap.exec() == QDialog::Accepted)
         {
             ProductoList * pl = DBQueries::productos();

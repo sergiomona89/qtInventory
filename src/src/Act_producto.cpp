@@ -27,7 +27,6 @@ Act_producto::Act_producto(int id, QString nombre, QString descripcion, QString 
 
     connect(aceptarPushButton, SIGNAL(clicked(void)), this, SLOT(actualizar(void)));
     connect(cancelarPushButton, SIGNAL(clicked(void)), this, SLOT(reject(void)));
-    print("llega aqui2");
 }
 
 void Act_producto::actualizar(void)

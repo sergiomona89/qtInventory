@@ -6,12 +6,9 @@
 #include "Act_bodega.h"
 #include "Administracionbodega.h"
 #include "Crear_bodega.h"
-<<<<<<< HEAD
 #include "Cliente.h"
 #include "DataStream.h"
-=======
 #include "types.h"
->>>>>>> master
 
 AdministracionBodega::AdministracionBodega(QWidget *parent) :
     QWidget(parent)
@@ -75,7 +72,6 @@ void AdministracionBodega::nuevaBodega()
         setBodegas(bl);
         delete bl;
     }
-    print("paso");//aqui hay violacion de segmento.
 }
 
 void AdministracionBodega::actualizarBodega()

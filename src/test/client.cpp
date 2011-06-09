@@ -59,12 +59,7 @@ int gui(int &argc, char **argv)
 {
     QApplication app(argc, argv);
 
-<<<<<<< HEAD
-//    Autenticarse au;
-    Crear_producto au;
-=======
     AdministracionProducto au;
->>>>>>> master
     au.show();
 
     return app.exec();
