@@ -10,9 +10,10 @@
 class Crear_producto : public QDialog, Ui::Crear_producto
 {
     Q_OBJECT
+    int indBodega[];
 
 public:
-    int indBodega[];
+    
     Crear_producto(QWidget *parent = 0);
 
 public slots:

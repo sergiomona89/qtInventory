@@ -11,6 +11,7 @@
 #include "autenticarse.h"
 #include "Crear_bodega.h"
 #include "Crear_producto.h"
+#include "AdministracionProducto.h"
 
 int db_options(int &argc, char **argv);
 int gui(int &argc, char **argv);
@@ -58,8 +59,12 @@ int gui(int &argc, char **argv)
 {
     QApplication app(argc, argv);
 
+<<<<<<< HEAD
 //    Autenticarse au;
     Crear_producto au;
+=======
+    AdministracionProducto au;
+>>>>>>> master
     au.show();
 
     return app.exec();
@@ -123,7 +128,7 @@ void create_db()
 
     query.exec("INSERT INTO tbusuario (nombre, cargo, contrasena, email, telefono) VALUES ('yo', 'admin', 'pass', 'yo@tu.com', 1234)");
     query.exec("INSERT INTO tbbodega (nombre, ubicacion, telefono, descripcion) VALUES ('la 35', 'cll 35 # 35-35', 555000, 'blablabla')");
-    query.exec("INSERT INTO tbproducto (nombre, descripcion, bodega, preciocompra, precioventa) VALUES ('pc algo', 'esta vacano', 'la 35', 50, 60)");
+    query.exec("INSERT INTO tbproducto (nombre, descripcion, bodega, preciocompra, precioventa) VALUES ('pc algo', 'esta vacano', '1', 50, 60)");
 
     delete db;
 }
