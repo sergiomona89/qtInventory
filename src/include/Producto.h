@@ -6,22 +6,24 @@
 class Producto
 {
 public:
-    Producto(void);
-    ~Producto(void);
+    Producto(void): Bodega(""), Descripcion(""), Nombre(""), PrecioCompra(""), PrecioVenta(""), Id(0) {}
+    ~Producto(void) {}
 
+    int getId(void);
     QString getBodega(void);
     QString getDescripcion(void);
     QString getNombre(void);
-    float getPrecioCompra(void);
-    float getPrecioVenta(void);
+    QString getPrecioCompra(void);
+    QString getPrecioVenta(void);
 
 
 
+    void setId(int id);
     void setBodega(QString bodega);
     void setDescripcion(QString description);
     void setNombre(QString nombre);
-    void setPrecioCompra(float precio);
-    void setPrecioVenta(float precio);
+    void setPrecioCompra(QString precio);
+    void setPrecioVenta(QString precio);
 
 
 protected:
@@ -29,10 +31,15 @@ protected:
     QString Descripcion;
     QString Nombre;
     QString PrecioCompra;
-
     QString PrecioVenta;
+    int Id;
 
 };
+
+inline int Producto::getId()
+{
+    return Id;
+}
 
 inline QString Producto::getBodega()
 {
@@ -49,14 +56,19 @@ inline QString Producto::getNombre()
     return Nombre;
 }
 
-inline float Producto::getPrecioCompra()
+inline QString Producto::getPrecioCompra()
 {
     return PrecioCompra;
 }
 
-inline float Producto::getPrecioVenta()
+inline QString Producto::getPrecioVenta()
 {
     return PrecioVenta;
+}
+
+inline void Producto::setId(int id)
+{
+    Id = id;
 }
 
 inline void Producto::setBodega(QString bodega)
@@ -74,12 +86,12 @@ inline void Producto::setNombre(QString nombre)
     Nombre = nombre;
 }
 
-inline void Producto::setPrecioCompra(float precio)
+inline void Producto::setPrecioCompra(QString precio)
 {
     PrecioCompra = precio;
 }
 
-inline void Producto::setPrecioVenta(float precio)
+inline void Producto::setPrecioVenta(QString precio)
 {
     PrecioVenta = precio;
 }

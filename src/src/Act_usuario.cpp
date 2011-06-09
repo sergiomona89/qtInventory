@@ -4,6 +4,7 @@
 #include <QMessageBox>
 #include "types.h"
 #include "Cliente.h"
+#include "DataStream.h"
 
 Act_usuario::Act_usuario(QString nombre, QString cargo, int id, QWidget *parent) :
     QDialog(parent)

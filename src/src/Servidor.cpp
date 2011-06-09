@@ -112,7 +112,6 @@ void Servidor::startRead()
     }
     else
     {
-        print("ni mierda: " << p);
         Respuesta r = error;
         enviar(r);
     }

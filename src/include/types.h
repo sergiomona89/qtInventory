@@ -5,13 +5,14 @@
 #define HOST			"localhost"
 #define PUERTO			3490
 
-#define print(X)		qDebug() << X;
+// #define print(X)		qDebug() << X;
 
 #define SERIALIZAR(X)		reinterpret_cast<char *>(&X)
 #define DESERIALIZAR(X)		reinterpret_cast<char *>(&X)
 
 #define debug()			qDebug() << __LINE__ << " - " << __FILE__
 
+// #define print(X)	qDebug() << X;
 enum Peticion {
     Autenticar,		// autentica un usuario en la base de datos
     DatosUsuario,	// muestra la información de un usuario
